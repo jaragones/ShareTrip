@@ -16,6 +16,17 @@
 		8D2008C12BECADE30043700A /* ShareTripTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2008C02BECADE30043700A /* ShareTripTests.swift */; };
 		8D2008CB2BECADE30043700A /* ShareTripUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2008CA2BECADE30043700A /* ShareTripUITests.swift */; };
 		8D2008CD2BECADE30043700A /* ShareTripUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2008CC2BECADE30043700A /* ShareTripUITestsLaunchTests.swift */; };
+		8DF3BD002BECB8D1001E2990 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF3BCFF2BECB8D1001E2990 /* HeaderView.swift */; };
+		8DF3BD022BECB931001E2990 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF3BD012BECB931001E2990 /* Color+Extension.swift */; };
+		8DF3BD042BECB9C5001E2990 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF3BD032BECB9C5001E2990 /* Common.swift */; };
+		8DF3BD072BECBB52001E2990 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF3BD062BECBB52001E2990 /* MapView.swift */; };
+		8DF3BD0A2BECBBD3001E2990 /* FiltersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF3BD092BECBBD3001E2990 /* FiltersView.swift */; };
+		8DF3BD0C2BECBC0E001E2990 /* FilterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF3BD0B2BECBC0E001E2990 /* FilterButton.swift */; };
+		8DF3BD0E2BECBE25001E2990 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF3BD0D2BECBE25001E2990 /* Enums.swift */; };
+		8DF3BD112BECBEA9001E2990 /* TripsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF3BD102BECBEA9001E2990 /* TripsListView.swift */; };
+		8DF3BD132BECBF2E001E2990 /* TripCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF3BD122BECBF2E001E2990 /* TripCellView.swift */; };
+		8DF3BD152BECD5F8001E2990 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF3BD142BECD5F8001E2990 /* Response.swift */; };
+		8DF3BD172BECE451001E2990 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF3BD162BECE451001E2990 /* Date+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +59,17 @@
 		8D2008C62BECADE30043700A /* ShareTripUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShareTripUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D2008CA2BECADE30043700A /* ShareTripUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareTripUITests.swift; sourceTree = "<group>"; };
 		8D2008CC2BECADE30043700A /* ShareTripUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareTripUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8DF3BCFF2BECB8D1001E2990 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		8DF3BD012BECB931001E2990 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		8DF3BD032BECB9C5001E2990 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		8DF3BD062BECBB52001E2990 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		8DF3BD092BECBBD3001E2990 /* FiltersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersView.swift; sourceTree = "<group>"; };
+		8DF3BD0B2BECBC0E001E2990 /* FilterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterButton.swift; sourceTree = "<group>"; };
+		8DF3BD0D2BECBE25001E2990 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		8DF3BD102BECBEA9001E2990 /* TripsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsListView.swift; sourceTree = "<group>"; };
+		8DF3BD122BECBF2E001E2990 /* TripCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripCellView.swift; sourceTree = "<group>"; };
+		8DF3BD142BECD5F8001E2990 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		8DF3BD162BECE451001E2990 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +128,7 @@
 				8DFC72622BECAF55006E3020 /* ViewModel */,
 				8DFC72612BECAF4A006E3020 /* View */,
 				8D2008AA2BECADE00043700A /* ShareTripApp.swift */,
+				8D2008AC2BECADE00043700A /* ContentView.swift */,
 				8D2008B32BECADE20043700A /* Persistence.swift */,
 				8D2008B02BECADE20043700A /* Preview Content */,
 			);
@@ -137,10 +160,47 @@
 			path = ShareTripUITests;
 			sourceTree = "<group>";
 		};
+		8DF3BCFE2BECB8C1001E2990 /* header */ = {
+			isa = PBXGroup;
+			children = (
+				8DF3BCFF2BECB8D1001E2990 /* HeaderView.swift */,
+			);
+			path = header;
+			sourceTree = "<group>";
+		};
+		8DF3BD052BECBB35001E2990 /* map */ = {
+			isa = PBXGroup;
+			children = (
+				8DF3BD062BECBB52001E2990 /* MapView.swift */,
+			);
+			path = map;
+			sourceTree = "<group>";
+		};
+		8DF3BD082BECBBB2001E2990 /* filters */ = {
+			isa = PBXGroup;
+			children = (
+				8DF3BD092BECBBD3001E2990 /* FiltersView.swift */,
+				8DF3BD0B2BECBC0E001E2990 /* FilterButton.swift */,
+			);
+			path = filters;
+			sourceTree = "<group>";
+		};
+		8DF3BD0F2BECBE93001E2990 /* list */ = {
+			isa = PBXGroup;
+			children = (
+				8DF3BD102BECBEA9001E2990 /* TripsListView.swift */,
+				8DF3BD122BECBF2E001E2990 /* TripCellView.swift */,
+			);
+			path = list;
+			sourceTree = "<group>";
+		};
 		8DFC72612BECAF4A006E3020 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				8D2008AC2BECADE00043700A /* ContentView.swift */,
+				8DF3BCFE2BECB8C1001E2990 /* header */,
+				8DF3BD052BECBB35001E2990 /* map */,
+				8DF3BD082BECBBB2001E2990 /* filters */,
+				8DF3BD0F2BECBE93001E2990 /* list */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -156,6 +216,7 @@
 			isa = PBXGroup;
 			children = (
 				8D2008B52BECADE20043700A /* ShareTrip.xcdatamodeld */,
+				8DF3BD142BECD5F8001E2990 /* Response.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -170,6 +231,8 @@
 		8DFC72652BECAF6B006E3020 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				8DF3BD012BECB931001E2990 /* Color+Extension.swift */,
+				8DF3BD162BECE451001E2990 /* Date+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -178,6 +241,8 @@
 			isa = PBXGroup;
 			children = (
 				8D2008AE2BECADE20043700A /* Assets.xcassets */,
+				8DF3BD032BECB9C5001E2990 /* Common.swift */,
+				8DF3BD0D2BECBE25001E2990 /* Enums.swift */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -319,10 +384,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DF3BD132BECBF2E001E2990 /* TripCellView.swift in Sources */,
+				8DF3BD002BECB8D1001E2990 /* HeaderView.swift in Sources */,
+				8DF3BD072BECBB52001E2990 /* MapView.swift in Sources */,
+				8DF3BD022BECB931001E2990 /* Color+Extension.swift in Sources */,
+				8DF3BD112BECBEA9001E2990 /* TripsListView.swift in Sources */,
+				8DF3BD172BECE451001E2990 /* Date+Extension.swift in Sources */,
 				8D2008B72BECADE20043700A /* ShareTrip.xcdatamodeld in Sources */,
+				8DF3BD152BECD5F8001E2990 /* Response.swift in Sources */,
+				8DF3BD0A2BECBBD3001E2990 /* FiltersView.swift in Sources */,
 				8D2008B42BECADE20043700A /* Persistence.swift in Sources */,
 				8D2008AD2BECADE00043700A /* ContentView.swift in Sources */,
+				8DF3BD0C2BECBC0E001E2990 /* FilterButton.swift in Sources */,
 				8D2008AB2BECADE00043700A /* ShareTripApp.swift in Sources */,
+				8DF3BD042BECB9C5001E2990 /* Common.swift in Sources */,
+				8DF3BD0E2BECBE25001E2990 /* Enums.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
