@@ -13,6 +13,12 @@ struct ContentView: View {
     @State private var selectedFilter: FilterOptions = .scheduled
     @State private var selectedTrip: Trip?
     
+    @ObservedObject var tripsViewModel : TripsViewModel
+    
+    init() {
+        self.tripsViewModel = TripsViewModel()
+    }
+    
     // just mocking up some stuff to prepare UI
     private var mockTrips = [
         Trip(driverName: "Alberto Morales", status: "ongoing", route: "sdq{Fc}iLj@zR|W~TryCzvC??do@jkKeiDxjIccLhiFqiE`uJqe@rlCy~B`t@sK|i@", startTime: "2018-12-18T08:00:00.000Z", origin: Destination(point: Point(latitude: 41.38074, longitude: 2.18594), address: "Metropolis:lab, Barcelona"), description: "Barcelona a Martorell", destination: Destination(point: Point(latitude: 41.49958, longitude: 1.90307), address: "Seat HQ, Martorell"), stops: [], endTime: "2018-12-18T09:00:00.000Z"),
@@ -38,9 +44,15 @@ struct ContentView: View {
                     .padding([.top, .bottom], 10)
                 
                 // Trips' list container
-                TripsListView(trips: mockTrips, selectedTrip: $selectedTrip)
+                TripsListView(trips: self.tripsViewModel.filteredTrips, selectedTrip: $selectedTrip)
             }
+        }.task {
+            await tripsViewModel.downloadTrips(url: URL(string: "https://sandbox-giravolta-static.s3.eu-west-1.amazonaws.com/tech-test/trips.json")!)
+            
+        }.onChange(of: selectedFilter) {
+            self.tripsViewModel.updateFilteredTrips(for: selectedFilter)
         }
+
     }
 }
 

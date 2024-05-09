@@ -27,6 +27,8 @@
 		8DF3BD132BECBF2E001E2990 /* TripCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF3BD122BECBF2E001E2990 /* TripCellView.swift */; };
 		8DF3BD152BECD5F8001E2990 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF3BD142BECD5F8001E2990 /* Response.swift */; };
 		8DF3BD172BECE451001E2990 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF3BD162BECE451001E2990 /* Date+Extension.swift */; };
+		8DF3BD192BED1A56001E2990 /* Webservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF3BD182BED1A56001E2990 /* Webservice.swift */; };
+		8DF3BD1B2BED1B23001E2990 /* TripsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF3BD1A2BED1B23001E2990 /* TripsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +72,8 @@
 		8DF3BD122BECBF2E001E2990 /* TripCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripCellView.swift; sourceTree = "<group>"; };
 		8DF3BD142BECD5F8001E2990 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		8DF3BD162BECE451001E2990 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		8DF3BD182BED1A56001E2990 /* Webservice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Webservice.swift; sourceTree = "<group>"; };
+		8DF3BD1A2BED1B23001E2990 /* TripsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,7 +132,6 @@
 				8DFC72622BECAF55006E3020 /* ViewModel */,
 				8DFC72612BECAF4A006E3020 /* View */,
 				8D2008AA2BECADE00043700A /* ShareTripApp.swift */,
-				8D2008AC2BECADE00043700A /* ContentView.swift */,
 				8D2008B32BECADE20043700A /* Persistence.swift */,
 				8D2008B02BECADE20043700A /* Preview Content */,
 			);
@@ -197,6 +200,7 @@
 		8DFC72612BECAF4A006E3020 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8D2008AC2BECADE00043700A /* ContentView.swift */,
 				8DF3BCFE2BECB8C1001E2990 /* header */,
 				8DF3BD052BECBB35001E2990 /* map */,
 				8DF3BD082BECBBB2001E2990 /* filters */,
@@ -208,6 +212,7 @@
 		8DFC72622BECAF55006E3020 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				8DF3BD1A2BED1B23001E2990 /* TripsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -224,6 +229,7 @@
 		8DFC72642BECAF64006E3020 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				8DF3BD182BED1A56001E2990 /* Webservice.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -394,9 +400,11 @@
 				8DF3BD152BECD5F8001E2990 /* Response.swift in Sources */,
 				8DF3BD0A2BECBBD3001E2990 /* FiltersView.swift in Sources */,
 				8D2008B42BECADE20043700A /* Persistence.swift in Sources */,
+				8DF3BD192BED1A56001E2990 /* Webservice.swift in Sources */,
 				8D2008AD2BECADE00043700A /* ContentView.swift in Sources */,
 				8DF3BD0C2BECBC0E001E2990 /* FilterButton.swift in Sources */,
 				8D2008AB2BECADE00043700A /* ShareTripApp.swift in Sources */,
+				8DF3BD1B2BED1B23001E2990 /* TripsViewModel.swift in Sources */,
 				8DF3BD042BECB9C5001E2990 /* Common.swift in Sources */,
 				8DF3BD0E2BECBE25001E2990 /* Enums.swift in Sources */,
 			);

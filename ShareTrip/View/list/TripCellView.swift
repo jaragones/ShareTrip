@@ -74,8 +74,8 @@ struct TripCellView: View {
     
     private func getBadgeStyle(for status: String) -> Color {
         switch status {
-            case "cancelled", "finished":
-                return .gray
+            case "cancelled", "finalized":
+                return .highlightAppColor
             default:
                 return .primaryAppColor
         }

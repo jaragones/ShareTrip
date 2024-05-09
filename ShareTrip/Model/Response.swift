@@ -8,7 +8,7 @@
 import Foundation
 
 struct Trip: Codable, Identifiable, Equatable {
-    var id = UUID()
+    let id = UUID()
     let driverName: String
     let status: String
     let route: String
@@ -30,6 +30,11 @@ struct Trip: Codable, Identifiable, Equatable {
                    lhs.stops == rhs.stops &&
                    lhs.endTime == rhs.endTime
         }
+    
+    // Excluding id from Decoding
+    private enum CodingKeys: String, CodingKey {
+        case driverName, status, route, startTime, origin, description, destination, stops, endTime
+    }
 }
 
 // MARK: - Destination
