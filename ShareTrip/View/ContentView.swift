@@ -26,7 +26,7 @@ struct ContentView: View {
                 HeaderView()
                 
                 // Map container
-                MapView()
+                MapsView(trip: selectedTrip)
                     .frame(height: (selectedTrip == nil) ? 160 : 300)
                     .cornerRadius(10)
                     .padding(20)
