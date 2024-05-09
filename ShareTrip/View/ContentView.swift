@@ -6,81 +6,69 @@
 //
 
 import SwiftUI
-import CoreData
 
 struct ContentView: View {
-    @Environment(\.managedObjectContext) private var viewContext
-
-    @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
-        animation: .default)
-    private var items: FetchedResults<Item>
-
+    
+    // we want to react in different views based on these values
+    @State private var selectedFilter: FilterOptions = .scheduled
+    @State private var selectedTrip: Trip?
+    
+    @ObservedObject var tripsViewModel : TripsViewModel
+    
+    init() {
+        self.tripsViewModel = TripsViewModel()
+    }
+    
     var body: some View {
         NavigationView {
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp!, formatter: itemFormatter)")
-                    } label: {
-                        Text(item.timestamp!, formatter: itemFormatter)
+            VStack (spacing:0) {
+                // Logo container
+                HeaderView()
+                
+                // Map container
+                MapView()
+                    .frame(height: (selectedTrip == nil) ? 160 : 300)
+                    .cornerRadius(10)
+                    .padding(20)
+                    .shadow(color: Color.black.opacity(0.2), radius: 10, x: 0, y: 5)
+                
+                // Filters container
+                FiltersView(selectedFilter: $selectedFilter)
+                    .padding([.leading, .trailing], 20)
+                    .padding([.top, .bottom], 10)
+                
+                // Trips' list container
+                ZStack {
+                    TripsListView(trips: self.tripsViewModel.filteredTrips, selectedTrip: $selectedTrip)
+                    
+                    // Show something to user if error is happening
+                    if tripsViewModel.trips.isEmpty || self.tripsViewModel.errorMessage != nil {
+                        ErrorView(message: self.tripsViewModel.errorMessage)
+                            .onTapGesture {
+                                // This is just an example what could be done
+                                Task {
+                                    await tripsViewModel.downloadTrips(url: URL(string: "https://sandbox-giravolta-static.s3.eu-west-1.amazonaws.com/tech-test/trips.json")!)
+                                }
+                            }
                     }
                 }
-                .onDelete(perform: deleteItems)
-            }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
+            }.overlay(
+                Group {
+                    if self.tripsViewModel.isLoading {
+                        LoadingOverlay()
                     }
                 }
-            }
-            Text("Select an item")
+            )
+        }.task {
+            await tripsViewModel.downloadTrips(url: URL(string: "https://sandbox-giravolta-static.s3.eu-west-1.amazonaws.com/tech-test/trips.json")!)
+            
+        }.onChange(of: selectedFilter) {
+            self.tripsViewModel.updateFilteredTrips(for: selectedFilter)
         }
-    }
 
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(context: viewContext)
-            newItem.timestamp = Date()
-
-            do {
-                try viewContext.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-            }
-        }
-    }
-
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            offsets.map { items[$0] }.forEach(viewContext.delete)
-
-            do {
-                try viewContext.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-            }
-        }
     }
 }
 
-private let itemFormatter: DateFormatter = {
-    let formatter = DateFormatter()
-    formatter.dateStyle = .short
-    formatter.timeStyle = .medium
-    return formatter
-}()
-
 #Preview {
-    ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+    ContentView()
 }
