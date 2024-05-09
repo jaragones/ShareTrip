@@ -29,6 +29,7 @@
 		8DF3BD172BECE451001E2990 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF3BD162BECE451001E2990 /* Date+Extension.swift */; };
 		8DF3BD192BED1A56001E2990 /* Webservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF3BD182BED1A56001E2990 /* Webservice.swift */; };
 		8DF3BD1B2BED1B23001E2990 /* TripsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF3BD1A2BED1B23001E2990 /* TripsViewModel.swift */; };
+		8DF3BD1E2BED7A56001E2990 /* LoadingOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF3BD1D2BED7A56001E2990 /* LoadingOverlay.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,7 @@
 		8DF3BD162BECE451001E2990 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		8DF3BD182BED1A56001E2990 /* Webservice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Webservice.swift; sourceTree = "<group>"; };
 		8DF3BD1A2BED1B23001E2990 /* TripsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsViewModel.swift; sourceTree = "<group>"; };
+		8DF3BD1D2BED7A56001E2990 /* LoadingOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingOverlay.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,9 +199,18 @@
 			path = list;
 			sourceTree = "<group>";
 		};
+		8DF3BD1C2BED7A45001E2990 /* loading */ = {
+			isa = PBXGroup;
+			children = (
+				8DF3BD1D2BED7A56001E2990 /* LoadingOverlay.swift */,
+			);
+			path = loading;
+			sourceTree = "<group>";
+		};
 		8DFC72612BECAF4A006E3020 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8DF3BD1C2BED7A45001E2990 /* loading */,
 				8D2008AC2BECADE00043700A /* ContentView.swift */,
 				8DF3BCFE2BECB8C1001E2990 /* header */,
 				8DF3BD052BECBB35001E2990 /* map */,
@@ -407,6 +418,7 @@
 				8DF3BD1B2BED1B23001E2990 /* TripsViewModel.swift in Sources */,
 				8DF3BD042BECB9C5001E2990 /* Common.swift in Sources */,
 				8DF3BD0E2BECBE25001E2990 /* Enums.swift in Sources */,
+				8DF3BD1E2BED7A56001E2990 /* LoadingOverlay.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

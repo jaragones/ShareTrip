@@ -45,7 +45,13 @@ struct ContentView: View {
                 
                 // Trips' list container
                 TripsListView(trips: self.tripsViewModel.filteredTrips, selectedTrip: $selectedTrip)
-            }
+            }.overlay(
+                Group {
+                    if self.tripsViewModel.isLoading {
+                        LoadingOverlay()
+                    }
+                }
+            )
         }.task {
             await tripsViewModel.downloadTrips(url: URL(string: "https://sandbox-giravolta-static.s3.eu-west-1.amazonaws.com/tech-test/trips.json")!)
             
