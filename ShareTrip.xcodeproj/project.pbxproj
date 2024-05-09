@@ -98,11 +98,15 @@
 		8D2008A92BECADE00043700A /* ShareTrip */ = {
 			isa = PBXGroup;
 			children = (
+				8DFC72672BECAF8F006E3020 /* Delegate */,
+				8DFC72662BECAF85006E3020 /* Support */,
+				8DFC72652BECAF6B006E3020 /* Extension */,
+				8DFC72642BECAF64006E3020 /* Service */,
+				8DFC72632BECAF60006E3020 /* Model */,
+				8DFC72622BECAF55006E3020 /* ViewModel */,
+				8DFC72612BECAF4A006E3020 /* View */,
 				8D2008AA2BECADE00043700A /* ShareTripApp.swift */,
-				8D2008AC2BECADE00043700A /* ContentView.swift */,
-				8D2008AE2BECADE20043700A /* Assets.xcassets */,
 				8D2008B32BECADE20043700A /* Persistence.swift */,
-				8D2008B52BECADE20043700A /* ShareTrip.xcdatamodeld */,
 				8D2008B02BECADE20043700A /* Preview Content */,
 			);
 			path = ShareTrip;
@@ -131,6 +135,58 @@
 				8D2008CC2BECADE30043700A /* ShareTripUITestsLaunchTests.swift */,
 			);
 			path = ShareTripUITests;
+			sourceTree = "<group>";
+		};
+		8DFC72612BECAF4A006E3020 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8D2008AC2BECADE00043700A /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8DFC72622BECAF55006E3020 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		8DFC72632BECAF60006E3020 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8D2008B52BECADE20043700A /* ShareTrip.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8DFC72642BECAF64006E3020 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		8DFC72652BECAF6B006E3020 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		8DFC72662BECAF85006E3020 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				8D2008AE2BECADE20043700A /* Assets.xcassets */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		8DFC72672BECAF8F006E3020 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Delegate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
