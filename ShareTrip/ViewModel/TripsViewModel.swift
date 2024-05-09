@@ -23,10 +23,22 @@ class TripsViewModel: ObservableObject {
         do {
             self.trips = try await webservice.downloadTripsAsync(url: url)
             updateFilteredTrips(for: .scheduled)
+            
             self.isLoading = false
+            self.errorMessage = nil
+        } catch let customError as ResponseError {
+            self.isLoading = false
+            switch customError {
+            case .wrongURLError:
+                self.errorMessage = "Server couldn't be reached"
+            case .parseDataError:
+                self.errorMessage = "Data couldn't be parsed"
+            default:
+                self.errorMessage = "Something went wrong"
+            }
         } catch {
-            self.errorMessage = error.localizedDescription
             self.isLoading = false
+            self.errorMessage = "Something went wrong"
         }
     }
     

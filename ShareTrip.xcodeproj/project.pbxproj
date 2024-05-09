@@ -30,6 +30,7 @@
 		8DF3BD192BED1A56001E2990 /* Webservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF3BD182BED1A56001E2990 /* Webservice.swift */; };
 		8DF3BD1B2BED1B23001E2990 /* TripsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF3BD1A2BED1B23001E2990 /* TripsViewModel.swift */; };
 		8DF3BD1E2BED7A56001E2990 /* LoadingOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF3BD1D2BED7A56001E2990 /* LoadingOverlay.swift */; };
+		8DF3BD272BED8344001E2990 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF3BD262BED8344001E2990 /* ErrorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 		8DF3BD182BED1A56001E2990 /* Webservice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Webservice.swift; sourceTree = "<group>"; };
 		8DF3BD1A2BED1B23001E2990 /* TripsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsViewModel.swift; sourceTree = "<group>"; };
 		8DF3BD1D2BED7A56001E2990 /* LoadingOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingOverlay.swift; sourceTree = "<group>"; };
+		8DF3BD262BED8344001E2990 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,15 +209,24 @@
 			path = loading;
 			sourceTree = "<group>";
 		};
+		8DF3BD252BED8333001E2990 /* error */ = {
+			isa = PBXGroup;
+			children = (
+				8DF3BD262BED8344001E2990 /* ErrorView.swift */,
+			);
+			path = error;
+			sourceTree = "<group>";
+		};
 		8DFC72612BECAF4A006E3020 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				8DF3BD1C2BED7A45001E2990 /* loading */,
 				8D2008AC2BECADE00043700A /* ContentView.swift */,
+				8DF3BD252BED8333001E2990 /* error */,
 				8DF3BCFE2BECB8C1001E2990 /* header */,
-				8DF3BD052BECBB35001E2990 /* map */,
 				8DF3BD082BECBBB2001E2990 /* filters */,
 				8DF3BD0F2BECBE93001E2990 /* list */,
+				8DF3BD1C2BED7A45001E2990 /* loading */,
+				8DF3BD052BECBB35001E2990 /* map */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -403,6 +414,7 @@
 			files = (
 				8DF3BD132BECBF2E001E2990 /* TripCellView.swift in Sources */,
 				8DF3BD002BECB8D1001E2990 /* HeaderView.swift in Sources */,
+				8DF3BD272BED8344001E2990 /* ErrorView.swift in Sources */,
 				8DF3BD072BECBB52001E2990 /* MapView.swift in Sources */,
 				8DF3BD022BECB931001E2990 /* Color+Extension.swift in Sources */,
 				8DF3BD112BECBEA9001E2990 /* TripsListView.swift in Sources */,

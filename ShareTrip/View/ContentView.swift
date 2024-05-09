@@ -19,12 +19,6 @@ struct ContentView: View {
         self.tripsViewModel = TripsViewModel()
     }
     
-    // just mocking up some stuff to prepare UI
-    private var mockTrips = [
-        Trip(driverName: "Alberto Morales", status: "ongoing", route: "sdq{Fc}iLj@zR|W~TryCzvC??do@jkKeiDxjIccLhiFqiE`uJqe@rlCy~B`t@sK|i@", startTime: "2018-12-18T08:00:00.000Z", origin: Destination(point: Point(latitude: 41.38074, longitude: 2.18594), address: "Metropolis:lab, Barcelona"), description: "Barcelona a Martorell", destination: Destination(point: Point(latitude: 41.49958, longitude: 1.90307), address: "Seat HQ, Martorell"), stops: [], endTime: "2018-12-18T09:00:00.000Z"),
-        Trip(driverName: "Joaquin Sabina", status: "ongoing", route: "sdq{Fc}iLj@zR|W~TryCzvC??do@jkKeiDxjIccLhiFqiE`uJqe@rlCy~B`t@sK|i@", startTime: "2018-12-18T08:00:00.000Z", origin: Destination(point: Point(latitude: 41.38074, longitude: 2.18594), address: "Metropolis:lab, Barcelona"), description: "Barcelona a Sant cugat", destination: Destination(point: Point(latitude: 41.49958, longitude: 1.90307), address: "Seat HQ, Martorell"), stops: [], endTime: "2018-12-18T09:00:00.000Z")
-    ]
-
     var body: some View {
         NavigationView {
             VStack (spacing:0) {
@@ -33,7 +27,7 @@ struct ContentView: View {
                 
                 // Map container
                 MapView()
-                    .frame(height: (selectedTrip == nil) ? 160 : 250)
+                    .frame(height: (selectedTrip == nil) ? 160 : 300)
                     .cornerRadius(10)
                     .padding(20)
                     .shadow(color: Color.black.opacity(0.2), radius: 10, x: 0, y: 5)
@@ -44,7 +38,20 @@ struct ContentView: View {
                     .padding([.top, .bottom], 10)
                 
                 // Trips' list container
-                TripsListView(trips: self.tripsViewModel.filteredTrips, selectedTrip: $selectedTrip)
+                ZStack {
+                    TripsListView(trips: self.tripsViewModel.filteredTrips, selectedTrip: $selectedTrip)
+                    
+                    // Show something to user if error is happening
+                    if tripsViewModel.trips.isEmpty || self.tripsViewModel.errorMessage != nil {
+                        ErrorView(message: self.tripsViewModel.errorMessage)
+                            .onTapGesture {
+                                // This is just an example what could be done
+                                Task {
+                                    await tripsViewModel.downloadTrips(url: URL(string: "https://sandbox-giravolta-static.s3.eu-west-1.amazonaws.com/tech-test/trips.json")!)
+                                }
+                            }
+                    }
+                }
             }.overlay(
                 Group {
                     if self.tripsViewModel.isLoading {
