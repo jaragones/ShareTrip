@@ -41,6 +41,7 @@
 		8DF3BD3D2BED8E07001E2990 /* Polyline in Frameworks */ = {isa = PBXBuildFile; productRef = 8DF3BD3C2BED8E07001E2990 /* Polyline */; };
 		8DF3BD3F2BED8F11001E2990 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF3BD3E2BED8F11001E2990 /* AppDelegate.swift */; };
 		8DF3BD412BED90F2001E2990 /* GoogleMapsPrivacy.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8DF3BD402BED90F2001E2990 /* GoogleMapsPrivacy.bundle */; };
+		8DF3BD432BED9268001E2990 /* credentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8DF3BD422BED9268001E2990 /* credentials.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +95,7 @@
 		8DF3BD2E2BED8793001E2990 /* ResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseTests.swift; sourceTree = "<group>"; };
 		8DF3BD3E2BED8F11001E2990 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8DF3BD402BED90F2001E2990 /* GoogleMapsPrivacy.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GoogleMapsPrivacy.bundle; sourceTree = "<group>"; };
+		8DF3BD422BED9268001E2990 /* credentials.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = credentials.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -293,6 +295,7 @@
 		8DFC72662BECAF85006E3020 /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				8DF3BD422BED9268001E2990 /* credentials.plist */,
 				8D2008AE2BECADE20043700A /* Assets.xcassets */,
 				8DF3BD032BECB9C5001E2990 /* Common.swift */,
 				8DF3BD0D2BECBE25001E2990 /* Enums.swift */,
@@ -423,6 +426,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D2008B22BECADE20043700A /* Preview Assets.xcassets in Resources */,
+				8DF3BD432BED9268001E2990 /* credentials.plist in Resources */,
 				8D2008AF2BECADE20043700A /* Assets.xcassets in Resources */,
 				8DF3BD412BED90F2001E2990 /* GoogleMapsPrivacy.bundle in Resources */,
 			);
