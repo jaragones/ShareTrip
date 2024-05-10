@@ -11,8 +11,8 @@ import Polyline
 
 struct MapsView: UIViewRepresentable {
     @State private var selectedMarker: GMSMarker? = nil
+    
     var trip: Trip?
-
 
     var path: GMSPath? {
         return GMSPath(fromEncodedPath: self.trip?.route ?? "")
@@ -30,7 +30,7 @@ struct MapsView: UIViewRepresentable {
 
         return mapView
     }
-
+    
     func updateUIView(_ uiView: GMSMapView, context: Context) {
         updateMapForSelectedTrip(on: uiView) // Pass the correct uiView
     }
@@ -90,9 +90,19 @@ struct MapsView: UIViewRepresentable {
                 let marker = GMSMarker()
                 marker.position = CLLocationCoordinate2D(latitude: point.latitude, longitude: point.longitude)
                 marker.title = "stop"
-                marker.userData = ["type" : "stop", "value" : stop.id as Any]
+                marker.snippet = "snippet"
                 marker.icon = addImageAsMarker(name: "ic_stopMarker", color: .red)
+                marker.tracksInfoWindowChanges = true
                 markers.append(marker)
+                
+                Webservice().getStop(stopId: stop.id!) { result in
+                    switch result {
+                    case .success(let data):
+                        marker.userData = ["type" : "stop", "value" : data]
+                    case .failure(let error):
+                        print("Error fetching data: \(error)")
+                    }
+                }
             }
          }
         
@@ -126,48 +136,36 @@ struct MapsView: UIViewRepresentable {
         }
         
         func mapView(_ mapView: GMSMapView, markerInfoWindow marker: GMSMarker) -> UIView? {
-            if marker == mapView.selectedMarker {
-                var address: String = ""
-                var time: String = ""
-                var username: String = ""
-                
-                if let data = marker.userData as? [String: Any] {
-                    if data["type"] as! String == "stop" {
-                        if let stop = getExtendedStop(data["value"] as Any) {
-                            address = stop.address
-                            username = stop.userName
-                            time = stop.stopTime
-                        } else {
-                            return nil
-                        }
-                    } else {
-                        let trip = data["value"] as! Trip
-                        let type = data["type"] as! String
-                        address = (type == "origin") ? trip.origin.address : trip.destination.address
-                        time = (type == "origin") ? trip.startTime : trip.endTime
-                        username = trip.driverName
-                    }
-                    
-                    let bubbleWindow = UIHostingController(rootView: MapBubbleView(address: address, time: time, username: username))
-                    bubbleWindow.view.frame = CGRect(x: 0, y: 0, width: 200, height: 100)
-                    bubbleWindow.view.backgroundColor = UIColor.clear
-                    return bubbleWindow.view
-                } else {
-                    return nil
-                }
+            guard marker == mapView.selectedMarker,
+                  let data = marker.userData as? [String: Any] else {
+                return nil
             }
-            return nil
-        }
-        
-        func getExtendedStop(_ data: Any) -> StopExtended? {
-            let url = URL(string: "https://sandbox-giravolta-static.s3.eu-west-1.amazonaws.com/tech-test/stops.json")!
-            do {
-                let stop = try JSONDecoder().decode(StopExtended.self, from: Data(contentsOf: url))
-                return stop
-            } catch {
-                print("Error fetching data: \(error)")
+
+            var address = ""
+            var time = ""
+            var username = ""
+            var price = 0.0
+            var bubbleType: BubbleType = .stop
+
+            if let stop = data["value"] as? StopExtended {
+                address = stop.address
+                username = stop.userName
+                time = stop.stopTime
+                price = stop.price
+            } else if let trip = data["value"] as? Trip, let type = data["type"] as? String {
+                address = (type == "origin") ? trip.origin.address : trip.destination.address
+                time = (type == "origin") ? trip.startTime : trip.endTime
+                username = trip.driverName
+                bubbleType = (type == "origin") ? .start : .end
+            } else {
+                return nil
             }
-            return nil
+
+            let infoWindow = MapBubbleView(type: bubbleType, address: address, time: time, price: price, username: username)
+            let bubbleWindow = UIHostingController(rootView: infoWindow)
+            bubbleWindow.view.frame = CGRect(x: 0, y: 0, width: 300, height: 100)
+            bubbleWindow.view.backgroundColor = UIColor.clear
+            return bubbleWindow.view
         }
     }
     

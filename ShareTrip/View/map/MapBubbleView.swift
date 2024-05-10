@@ -7,33 +7,82 @@
 
 import SwiftUI
 
+enum BubbleType {
+    case start
+    case end
+    case stop
+}
+
 struct MapBubbleView: View {
-    
-    @ObservedObject var mapsViewModel : MapsViewModel
-    
     var address, time, username: String
-    
-    init(address: String, time: String, username: String) {
-        self.mapsViewModel = MapsViewModel()
+    var price: Double
+    var type: BubbleType
+
+    init(type: BubbleType, address: String, time: String, price: Double, username: String) {
         self.address = address
         self.time = time
         self.username = username
+        self.price = price
+        self.type = type
     }
-    
+
     var body: some View {
         VStack(alignment: .leading, spacing: 5) {
-            Text("\(self.address)")
-            Text("\(self.time)")
-            Text("\(self.username)")
-            
-//            Text("StopTime: \(point.stopTime)")
-//            Text("Price: \(point.price)")
-//            Text("Type: \(point.type)")
-//            Text("Passenger: \(point.passenger)")
+            Text(getTitleFor(type: self.type))
+                .font(.subheadline)
+                .bold()
+            HStack{
+                Image("ic_location")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 10, height: 10)
+                Text("\(self.address)")
+                    .font(.system(size: 11))
+            }
+            HStack{
+                Image("ic_time")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 10, height: 10)
+                Text("\(Date().fromStringWithFormat(str: self.time)!.formatted())")
+                    .font(.system(size: 11))
+            }
+            HStack{
+                Image("ic_person")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 10, height: 10)
+                Text("\(self.username)")
+                    .font(.system(size: 11))
+            }
+            if type == .stop {
+                HStack {
+                    Image("ic_money")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 10, height: 10)
+                    Text(stringifyPrice(price: price)) // Use internalPrice
+                        .font(.system(size: 11))
+                }
+            }
         }
         .padding()
         .background(Color.white)
         .cornerRadius(8)
-        .shadow(radius: 3)
+    }
+
+    private func stringifyPrice(price: Double) -> String {
+        return String(format: "%.2f", price)
+    }
+
+    private func getTitleFor(type: BubbleType) -> String {
+        switch type {
+        case .stop:
+            return "Requested stop"
+        case .start:
+            return "Starting point"
+        case .end:
+            return "Ending point"
+        }
     }
 }

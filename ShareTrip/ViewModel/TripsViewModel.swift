@@ -12,7 +12,7 @@ class TripsViewModel: ObservableObject {
     @Published var isLoading: Bool = false
     @Published var errorMessage: String?
     @Published var filteredTrips: Trips = []
-    
+        
     var trips: Trips = []
     
     func downloadTrips(url: URL) async {
@@ -21,7 +21,7 @@ class TripsViewModel: ObservableObject {
         // Fetch data from web service
         let webservice = Webservice()
         do {
-            self.trips = try await webservice.downloadTripsAsync(url: url)
+            self.trips = try await webservice.getTripsAsync(url: url)
             updateFilteredTrips(for: .scheduled)
             
             self.isLoading = false
@@ -41,8 +41,6 @@ class TripsViewModel: ObservableObject {
             self.errorMessage = "Something went wrong"
         }
     }
-    
-    
     
     func updateFilteredTrips(for filter: FilterOptions) {
         switch filter {
