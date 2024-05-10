@@ -16,6 +16,7 @@
 		8D2008C12BECADE30043700A /* ShareTripTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2008C02BECADE30043700A /* ShareTripTests.swift */; };
 		8D2008CB2BECADE30043700A /* ShareTripUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2008CA2BECADE30043700A /* ShareTripUITests.swift */; };
 		8D2008CD2BECADE30043700A /* ShareTripUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2008CC2BECADE30043700A /* ShareTripUITestsLaunchTests.swift */; };
+		8D72EA002BEE0E550000A84A /* MapDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D72E9FF2BEE0E550000A84A /* MapDescriptionView.swift */; };
 		8DF3BD002BECB8D1001E2990 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF3BCFF2BECB8D1001E2990 /* HeaderView.swift */; };
 		8DF3BD022BECB931001E2990 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF3BD012BECB931001E2990 /* Color+Extension.swift */; };
 		8DF3BD042BECB9C5001E2990 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF3BD032BECB9C5001E2990 /* Common.swift */; };
@@ -35,6 +36,13 @@
 		8DF3BD2B2BED85B0001E2990 /* ColorExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF3BD2A2BED85B0001E2990 /* ColorExtensionTests.swift */; };
 		8DF3BD2D2BED8664001E2990 /* DateExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF3BD2C2BED8664001E2990 /* DateExtensionTests.swift */; };
 		8DF3BD2F2BED8793001E2990 /* ResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF3BD2E2BED8793001E2990 /* ResponseTests.swift */; };
+		8DF3BD362BED8CFE001E2990 /* GoogleMaps in Frameworks */ = {isa = PBXBuildFile; productRef = 8DF3BD352BED8CFE001E2990 /* GoogleMaps */; };
+		8DF3BD382BED8CFE001E2990 /* GoogleMapsBase in Frameworks */ = {isa = PBXBuildFile; productRef = 8DF3BD372BED8CFE001E2990 /* GoogleMapsBase */; };
+		8DF3BD3A2BED8CFE001E2990 /* GoogleMapsCore in Frameworks */ = {isa = PBXBuildFile; productRef = 8DF3BD392BED8CFE001E2990 /* GoogleMapsCore */; };
+		8DF3BD3D2BED8E07001E2990 /* Polyline in Frameworks */ = {isa = PBXBuildFile; productRef = 8DF3BD3C2BED8E07001E2990 /* Polyline */; };
+		8DF3BD3F2BED8F11001E2990 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF3BD3E2BED8F11001E2990 /* AppDelegate.swift */; };
+		8DF3BD412BED90F2001E2990 /* GoogleMapsPrivacy.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8DF3BD402BED90F2001E2990 /* GoogleMapsPrivacy.bundle */; };
+		8DF3BD432BED9268001E2990 /* credentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8DF3BD422BED9268001E2990 /* credentials.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +75,7 @@
 		8D2008C62BECADE30043700A /* ShareTripUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShareTripUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D2008CA2BECADE30043700A /* ShareTripUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareTripUITests.swift; sourceTree = "<group>"; };
 		8D2008CC2BECADE30043700A /* ShareTripUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareTripUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8D72E9FF2BEE0E550000A84A /* MapDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDescriptionView.swift; sourceTree = "<group>"; };
 		8DF3BCFF2BECB8D1001E2990 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		8DF3BD012BECB931001E2990 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		8DF3BD032BECB9C5001E2990 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
@@ -86,6 +95,9 @@
 		8DF3BD2A2BED85B0001E2990 /* ColorExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtensionTests.swift; sourceTree = "<group>"; };
 		8DF3BD2C2BED8664001E2990 /* DateExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensionTests.swift; sourceTree = "<group>"; };
 		8DF3BD2E2BED8793001E2990 /* ResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseTests.swift; sourceTree = "<group>"; };
+		8DF3BD3E2BED8F11001E2990 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8DF3BD402BED90F2001E2990 /* GoogleMapsPrivacy.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GoogleMapsPrivacy.bundle; sourceTree = "<group>"; };
+		8DF3BD422BED9268001E2990 /* credentials.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = credentials.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +105,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DF3BD3D2BED8E07001E2990 /* Polyline in Frameworks */,
+				8DF3BD362BED8CFE001E2990 /* GoogleMaps in Frameworks */,
+				8DF3BD3A2BED8CFE001E2990 /* GoogleMapsCore in Frameworks */,
+				8DF3BD382BED8CFE001E2990 /* GoogleMapsBase in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,6 +132,7 @@
 		8D20089E2BECADE00043700A = {
 			isa = PBXGroup;
 			children = (
+				8DF3BD402BED90F2001E2990 /* GoogleMapsPrivacy.bundle */,
 				8D2008A92BECADE00043700A /* ShareTrip */,
 				8D2008BF2BECADE30043700A /* ShareTripTests */,
 				8D2008C92BECADE30043700A /* ShareTripUITests */,
@@ -191,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				8DF3BD062BECBB52001E2990 /* MapView.swift */,
+				8D72E9FF2BEE0E550000A84A /* MapDescriptionView.swift */,
 			);
 			path = map;
 			sourceTree = "<group>";
@@ -280,6 +298,7 @@
 		8DFC72662BECAF85006E3020 /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				8DF3BD422BED9268001E2990 /* credentials.plist */,
 				8D2008AE2BECADE20043700A /* Assets.xcassets */,
 				8DF3BD032BECB9C5001E2990 /* Common.swift */,
 				8DF3BD0D2BECBE25001E2990 /* Enums.swift */,
@@ -290,6 +309,7 @@
 		8DFC72672BECAF8F006E3020 /* Delegate */ = {
 			isa = PBXGroup;
 			children = (
+				8DF3BD3E2BED8F11001E2990 /* AppDelegate.swift */,
 			);
 			path = Delegate;
 			sourceTree = "<group>";
@@ -310,6 +330,12 @@
 			dependencies = (
 			);
 			name = ShareTrip;
+			packageProductDependencies = (
+				8DF3BD352BED8CFE001E2990 /* GoogleMaps */,
+				8DF3BD372BED8CFE001E2990 /* GoogleMapsBase */,
+				8DF3BD392BED8CFE001E2990 /* GoogleMapsCore */,
+				8DF3BD3C2BED8E07001E2990 /* Polyline */,
+			);
 			productName = ShareTrip;
 			productReference = 8D2008A72BECADE00043700A /* ShareTrip.app */;
 			productType = "com.apple.product-type.application";
@@ -382,6 +408,10 @@
 				Base,
 			);
 			mainGroup = 8D20089E2BECADE00043700A;
+			packageReferences = (
+				8DF3BD342BED8CFE001E2990 /* XCRemoteSwiftPackageReference "ios-maps-sdk" */,
+				8DF3BD3B2BED8E07001E2990 /* XCRemoteSwiftPackageReference "Polyline" */,
+			);
 			productRefGroup = 8D2008A82BECADE00043700A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -399,7 +429,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D2008B22BECADE20043700A /* Preview Assets.xcassets in Resources */,
+				8DF3BD432BED9268001E2990 /* credentials.plist in Resources */,
 				8D2008AF2BECADE20043700A /* Assets.xcassets in Resources */,
+				8DF3BD412BED90F2001E2990 /* GoogleMapsPrivacy.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,12 +464,14 @@
 				8DF3BD112BECBEA9001E2990 /* TripsListView.swift in Sources */,
 				8DF3BD172BECE451001E2990 /* Date+Extension.swift in Sources */,
 				8D2008B72BECADE20043700A /* ShareTrip.xcdatamodeld in Sources */,
+				8DF3BD3F2BED8F11001E2990 /* AppDelegate.swift in Sources */,
 				8DF3BD152BECD5F8001E2990 /* Response.swift in Sources */,
 				8DF3BD0A2BECBBD3001E2990 /* FiltersView.swift in Sources */,
 				8D2008B42BECADE20043700A /* Persistence.swift in Sources */,
 				8DF3BD192BED1A56001E2990 /* Webservice.swift in Sources */,
 				8D2008AD2BECADE00043700A /* ContentView.swift in Sources */,
 				8DF3BD0C2BECBC0E001E2990 /* FilterButton.swift in Sources */,
+				8D72EA002BEE0E550000A84A /* MapDescriptionView.swift in Sources */,
 				8D2008AB2BECADE00043700A /* ShareTripApp.swift in Sources */,
 				8DF3BD1B2BED1B23001E2990 /* TripsViewModel.swift in Sources */,
 				8DF3BD042BECB9C5001E2990 /* Common.swift in Sources */,
@@ -776,6 +810,48 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8DF3BD342BED8CFE001E2990 /* XCRemoteSwiftPackageReference "ios-maps-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googlemaps/ios-maps-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.4.0;
+			};
+		};
+		8DF3BD3B2BED8E07001E2990 /* XCRemoteSwiftPackageReference "Polyline" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/raphaelmor/Polyline.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8DF3BD352BED8CFE001E2990 /* GoogleMaps */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8DF3BD342BED8CFE001E2990 /* XCRemoteSwiftPackageReference "ios-maps-sdk" */;
+			productName = GoogleMaps;
+		};
+		8DF3BD372BED8CFE001E2990 /* GoogleMapsBase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8DF3BD342BED8CFE001E2990 /* XCRemoteSwiftPackageReference "ios-maps-sdk" */;
+			productName = GoogleMapsBase;
+		};
+		8DF3BD392BED8CFE001E2990 /* GoogleMapsCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8DF3BD342BED8CFE001E2990 /* XCRemoteSwiftPackageReference "ios-maps-sdk" */;
+			productName = GoogleMapsCore;
+		};
+		8DF3BD3C2BED8E07001E2990 /* Polyline */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8DF3BD3B2BED8E07001E2990 /* XCRemoteSwiftPackageReference "Polyline" */;
+			productName = Polyline;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		8D2008B52BECADE20043700A /* ShareTrip.xcdatamodeld */ = {

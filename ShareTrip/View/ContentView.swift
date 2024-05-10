@@ -26,11 +26,16 @@ struct ContentView: View {
                 HeaderView()
                 
                 // Map container
-                MapView()
-                    .frame(height: (selectedTrip == nil) ? 160 : 300)
-                    .cornerRadius(10)
-                    .padding(20)
-                    .shadow(color: Color.black.opacity(0.2), radius: 10, x: 0, y: 5)
+                ZStack {
+                    MapsView(trip: selectedTrip)
+                        .frame(height: (selectedTrip == nil) ? 160 : 300)
+                        .cornerRadius(10)
+                        .padding(20)
+                        .shadow(color: Color.black.opacity(0.2), radius: 10, x: 0, y: 5)
+                        .id(UUID())
+                    
+                    MapDescriptionView(trip: selectedTrip)
+                }
                 
                 // Filters container
                 FiltersView(selectedFilter: $selectedFilter)
@@ -45,7 +50,6 @@ struct ContentView: View {
                     if tripsViewModel.trips.isEmpty || self.tripsViewModel.errorMessage != nil {
                         ErrorView(message: self.tripsViewModel.errorMessage)
                             .onTapGesture {
-                                // This is just an example what could be done
                                 Task {
                                     await tripsViewModel.downloadTrips(url: URL(string: "https://sandbox-giravolta-static.s3.eu-west-1.amazonaws.com/tech-test/trips.json")!)
                                 }
@@ -61,7 +65,6 @@ struct ContentView: View {
             )
         }.task {
             await tripsViewModel.downloadTrips(url: URL(string: "https://sandbox-giravolta-static.s3.eu-west-1.amazonaws.com/tech-test/trips.json")!)
-            
         }.onChange(of: selectedFilter) {
             self.tripsViewModel.updateFilteredTrips(for: selectedFilter)
         }

@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-@main
 struct ShareTripApp: App {
     let persistenceController = PersistenceController.shared
 

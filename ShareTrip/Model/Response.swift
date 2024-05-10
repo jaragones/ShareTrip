@@ -20,20 +20,24 @@ struct Trip: Codable, Identifiable, Equatable {
     let endTime: String
     
     static func == (lhs: Trip, rhs: Trip) -> Bool {
-            return lhs.driverName == rhs.driverName &&
-                   lhs.status == rhs.status &&
-                   lhs.route == rhs.route &&
-                   lhs.startTime == rhs.startTime &&
-                   lhs.origin == rhs.origin &&
-                   lhs.description == rhs.description &&
-                   lhs.destination == rhs.destination &&
-                   lhs.stops == rhs.stops &&
-                   lhs.endTime == rhs.endTime
-        }
+        return lhs.driverName == rhs.driverName &&
+               lhs.status == rhs.status &&
+               lhs.route == rhs.route &&
+               lhs.startTime == rhs.startTime &&
+               lhs.origin == rhs.origin &&
+               lhs.description == rhs.description &&
+               lhs.destination == rhs.destination &&
+               lhs.stops == rhs.stops &&
+               lhs.endTime == rhs.endTime
+    }
     
     // Excluding id from Decoding
     private enum CodingKeys: String, CodingKey {
         case driverName, status, route, startTime, origin, description, destination, stops, endTime
+    }
+    
+    var validStops: [Stop] {
+        return stops.filter { $0.point != nil }
     }
 }
 
@@ -69,6 +73,20 @@ struct Stop: Codable, Equatable {
     static func == (lhs: Stop, rhs: Stop) -> Bool {
         return lhs.point == rhs.point && lhs.id == rhs.id
     }
+    
+//    init(from decoder: Decoder) throws {
+//        let container = try decoder.container(keyedBy: CodingKeys.self)
+//        if container.contains(.point) {
+//            point = try container.decode(Point.self, forKey: .point)
+//        } else {
+//            point = nil
+//        }
+//        if container.contains(.id) {
+//            id = try container.decode(Int.self, forKey: .id)
+//        } else {
+//            id = nil
+//        }
+//    }
 }
 
 

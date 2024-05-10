@@ -9,5 +9,5 @@ import SwiftUI
 
 struct AppColors {
     static let primaryHexColor = "#96F6AF"
-    static let highlightHexColor = "#F4FEF7"
+    static let highlightHexColor = "#E8FEEE"
 }
