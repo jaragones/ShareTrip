@@ -39,4 +39,50 @@ class Webservice {
             throw ResponseError.parseDataError(error.localizedDescription)
         }
     }
+    
+    func downloadStopAsync(url: URL) async throws -> StopExtended {
+        // Retrieving data from the URL
+        let (data, response) = try await self.session.data(from: url)
+        
+        // Check response for a successful HTTP status code
+        guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
+            throw ResponseError.wrongURLError
+        }
+        
+        // Decoding data into the Trips model
+        do {
+            let stop = try JSONDecoder().decode(StopExtended.self, from: data)
+            return stop
+        } catch {
+            // Adding description to our error
+            throw ResponseError.parseDataError(error.localizedDescription)
+        }
+    }
+    
+    func downloadStop(completion: @escaping (Result<StopExtended, Error>) -> Void) {
+        guard let url = URL(string: "https://sandbox-giravolta-static.s3.eu-west-1.amazonaws.com/tech-test/stops.json") else {
+            completion(.failure(ResponseError.wrongURLError))
+            return
+        }
+        
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            if let error = error {
+                completion(.failure(error))
+                return
+            }
+            
+            guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
+                completion(.failure(ResponseError.wrongURLError))
+                return
+            }
+            
+            do {
+                let stop = try JSONDecoder().decode(StopExtended.self, from: data!)
+                completion(.success(stop))
+            } catch {
+                completion(.failure(ResponseError.parseDataError(error.localizedDescription)))
+            }
+        }.resume()
+    }
+
 }
