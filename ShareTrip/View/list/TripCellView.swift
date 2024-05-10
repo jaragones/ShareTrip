@@ -52,7 +52,7 @@ struct TripCellView: View {
                             .font(.system(size:12))
                             .lineLimit(1)
                             .padding([.bottom], 3)
-                        Text(getVerboseForStops(count: trip.stops.count))
+                        Text(getVerboseForStops(count: trip.validStops.count))
                             .font(.system(size:12))
                             .lineLimit(1)
                             .padding([.top, .bottom], 0)

@@ -20,13 +20,17 @@ class AppDelegate: NSObject, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
+        initializeGoogleMaps()
+                
+        return true
+    }
+    
+    private func initializeGoogleMaps() {
         if let path = Bundle.main.path(forResource: "credentials", ofType: "plist"),
             let keys = NSDictionary(contentsOfFile: path),
             let apiKey = keys["GoogleMapsAPIKey"] as? String {
             GMSServices.provideAPIKey(apiKey)
         }
-                
-        return true
     }
 }
 
