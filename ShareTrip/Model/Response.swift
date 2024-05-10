@@ -73,21 +73,22 @@ struct Stop: Codable, Equatable {
     static func == (lhs: Stop, rhs: Stop) -> Bool {
         return lhs.point == rhs.point && lhs.id == rhs.id
     }
-    
-//    init(from decoder: Decoder) throws {
-//        let container = try decoder.container(keyedBy: CodingKeys.self)
-//        if container.contains(.point) {
-//            point = try container.decode(Point.self, forKey: .point)
-//        } else {
-//            point = nil
-//        }
-//        if container.contains(.id) {
-//            id = try container.decode(Int.self, forKey: .id)
-//        } else {
-//            id = nil
-//        }
-//    }
 }
 
+struct StopExtended: Codable {
+    let price: Double
+    let address: String
+    let tripID: Int
+    let paid: Bool
+    let stopTime: String
+    let point: Point
+    let userName: String
+
+    enum CodingKeys: String, CodingKey {
+        case price, address
+        case tripID = "tripId"
+        case paid, stopTime, point, userName
+    }
+}
 
 typealias Trips = [Trip]
