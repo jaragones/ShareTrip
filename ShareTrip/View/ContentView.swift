@@ -51,7 +51,7 @@ struct ContentView: View {
                         ErrorView(message: self.tripsViewModel.errorMessage)
                             .onTapGesture {
                                 Task {
-                                    await tripsViewModel.downloadTrips(url: URL(string: "https://sandbox-giravolta-static.s3.eu-west-1.amazonaws.com/tech-test/trips.json")!)
+                                    await tripsViewModel.retrieveTrips(from: URL(string: Urls.trips)!)
                                 }
                             }
                     }
@@ -64,8 +64,9 @@ struct ContentView: View {
                 }
             )
         }.task {
-            await tripsViewModel.downloadTrips(url: URL(string: "https://sandbox-giravolta-static.s3.eu-west-1.amazonaws.com/tech-test/trips.json")!)
+            await tripsViewModel.retrieveTrips(from: URL(string: Urls.trips)!)
         }.onChange(of: selectedFilter) {
+            // we request an update once 'filter' is updated
             self.tripsViewModel.updateFilteredTrips(for: selectedFilter)
         }
 

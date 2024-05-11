@@ -15,19 +15,20 @@ class TripsViewModel: ObservableObject {
         
     var trips: Trips = []
     
-    func downloadTrips(url: URL) async {
+    func retrieveTrips(from url: URL) async {
         self.isLoading = true
 
         // Fetch data from web service
         let webservice = Webservice()
         do {
+            // retrieve first page (10 elements) from url
             self.trips = try await webservice.getTripsAsync(url: url)
+            
+            // by default, we show .scheduled events
             updateFilteredTrips(for: .scheduled)
             
-            self.isLoading = false
             self.errorMessage = nil
         } catch let customError as ResponseError {
-            self.isLoading = false
             switch customError {
             case .wrongURLError:
                 self.errorMessage = "Server couldn't be reached"
@@ -37,8 +38,12 @@ class TripsViewModel: ObservableObject {
                 self.errorMessage = "Something went wrong"
             }
         } catch {
-            self.isLoading = false
             self.errorMessage = "Something went wrong"
+        }
+        
+        // once all is process we set loading
+        do {
+            self.isLoading = false
         }
     }
     

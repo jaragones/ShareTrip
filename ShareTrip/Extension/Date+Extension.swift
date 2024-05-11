@@ -8,7 +8,7 @@
 import SwiftUI
 
 extension Date {
-    // used to convert any "date" string into Date depending on format
+    // used to convert any "date" string into Date based on format
     func fromStringWithFormat(str: String, format: String = "yyyy-MM-dd'T'HH:mm:ss.SSSZ") -> Date? {
         let isoDate = str
         let dateFormatter = DateFormatter()
@@ -22,7 +22,7 @@ extension Date {
         }
     }
     
-    // shorting way to get Calendar component
+    // shorted way to get Calendar component
     func get(_ component: Calendar.Component, calendar: Calendar = Calendar.current) -> Int {
         return calendar.component(component, from: self)
     }

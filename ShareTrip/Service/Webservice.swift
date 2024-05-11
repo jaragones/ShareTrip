@@ -7,13 +7,6 @@
 
 import Foundation
 
-// Customized error to handle errors
-enum ResponseError: Error {
-    case wrongURLError
-    case wrongDataError
-    case parseDataError(String)
-}
-
 class Webservice {
     let session: URLSession
 
@@ -21,6 +14,7 @@ class Webservice {
         self.session = session
     }
     
+    // used to retrieve list of trips
     func getTripsAsync(url: URL) async throws -> Trips {
         // Retrieving data from the URL
         let (data, response) = try await self.session.data(from: url)
@@ -30,8 +24,8 @@ class Webservice {
             throw ResponseError.wrongURLError
         }
         
-        // Decoding data into the Trips model
         do {
+            // Decoding data into the Trips model
             let trips = try JSONDecoder().decode([Trip].self, from: data)
             return trips
         } catch {
@@ -40,8 +34,9 @@ class Webservice {
         }
     }
         
+    // used to retrieve specific stop, stopID is not used
     func getStop(stopId: Int, completion: @escaping (Result<StopExtended, Error>) -> Void) {
-        guard let url = URL(string: "https://sandbox-giravolta-static.s3.eu-west-1.amazonaws.com/tech-test/stops.json") else {
+        guard let url = URL(string: Urls.stops) else {
             completion(.failure(ResponseError.wrongURLError))
             return
         }
