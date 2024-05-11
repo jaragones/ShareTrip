@@ -34,6 +34,36 @@
             endingLineNumber = "16"
             landmarkName = "body"
             landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "3ADFA8BA-B594-4AB6-A068-59F49FA6030E - 3ff909abcce8cedc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.environment&lt;&#x3c4;_0_0&gt;(Swift.WritableKeyPath&lt;SwiftUI.EnvironmentValues, &#x3c4;_1_0&gt;, &#x3c4;_1_0) -&gt; some&gt;&gt;.0 in ShareTrip.ShareTripApp.body.getter : some"
+                  moduleName = "ShareTrip"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jordi/Development/iOS/ShareTrip/ShareTrip/ShareTripApp.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16">
+               </Location>
+               <Location
+                  uuid = "3ADFA8BA-B594-4AB6-A068-59F49FA6030E - 3ff909abcce8cedc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.environment&lt;&#x3c4;_0_0&gt;(Swift.WritableKeyPath&lt;SwiftUI.EnvironmentValues, &#x3c4;_1_0&gt;, &#x3c4;_1_0) -&gt; some&gt;&gt;.0 in ShareTrip.ShareTripApp.body.getter : some"
+                  moduleName = "ShareTrip"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jordi/Development/iOS/ShareTrip/ShareTrip/ShareTripApp.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
