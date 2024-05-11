@@ -19,6 +19,9 @@
 		8D72EA002BEE0E550000A84A /* MapDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D72E9FF2BEE0E550000A84A /* MapDescriptionView.swift */; };
 		8D72EA022BEE14340000A84A /* MapBubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D72EA012BEE14340000A84A /* MapBubbleView.swift */; };
 		8D72EA042BEE1A010000A84A /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D72EA032BEE1A010000A84A /* UIImage+Extension.swift */; };
+		8DCBB4BA2BEEE37100E425CD /* SCReport+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCBB4B92BEEE37100E425CD /* SCReport+Extension.swift */; };
+		8DE0B1A82BEEC198003CA92B /* ContactFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE0B1A72BEEC198003CA92B /* ContactFormViewModel.swift */; };
+		8DE0B1AA2BEEC1AE003CA92B /* ContactFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE0B1A92BEEC1AE003CA92B /* ContactFormView.swift */; };
 		8DF3BD002BECB8D1001E2990 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF3BCFF2BECB8D1001E2990 /* HeaderView.swift */; };
 		8DF3BD022BECB931001E2990 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF3BD012BECB931001E2990 /* Color+Extension.swift */; };
 		8DF3BD042BECB9C5001E2990 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF3BD032BECB9C5001E2990 /* Common.swift */; };
@@ -80,6 +83,9 @@
 		8D72E9FF2BEE0E550000A84A /* MapDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDescriptionView.swift; sourceTree = "<group>"; };
 		8D72EA012BEE14340000A84A /* MapBubbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapBubbleView.swift; sourceTree = "<group>"; };
 		8D72EA032BEE1A010000A84A /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		8DCBB4B92BEEE37100E425CD /* SCReport+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SCReport+Extension.swift"; sourceTree = "<group>"; };
+		8DE0B1A72BEEC198003CA92B /* ContactFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactFormViewModel.swift; sourceTree = "<group>"; };
+		8DE0B1A92BEEC1AE003CA92B /* ContactFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactFormView.swift; sourceTree = "<group>"; };
 		8DF3BCFF2BECB8D1001E2990 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		8DF3BD012BECB931001E2990 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		8DF3BD032BECB9C5001E2990 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
@@ -256,6 +262,7 @@
 			isa = PBXGroup;
 			children = (
 				8D2008AC2BECADE00043700A /* ContentView.swift */,
+				8DE0B1A92BEEC1AE003CA92B /* ContactFormView.swift */,
 				8DF3BD252BED8333001E2990 /* error */,
 				8DF3BCFE2BECB8C1001E2990 /* header */,
 				8DF3BD082BECBBB2001E2990 /* filters */,
@@ -270,6 +277,7 @@
 			isa = PBXGroup;
 			children = (
 				8DF3BD1A2BED1B23001E2990 /* TripsViewModel.swift */,
+				8DE0B1A72BEEC198003CA92B /* ContactFormViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -279,6 +287,7 @@
 			children = (
 				8D2008B52BECADE20043700A /* ShareTrip.xcdatamodeld */,
 				8DF3BD142BECD5F8001E2990 /* Response.swift */,
+				8DCBB4B92BEEE37100E425CD /* SCReport+Extension.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -463,6 +472,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DF3BD132BECBF2E001E2990 /* TripCellView.swift in Sources */,
+				8DE0B1A82BEEC198003CA92B /* ContactFormViewModel.swift in Sources */,
 				8D72EA022BEE14340000A84A /* MapBubbleView.swift in Sources */,
 				8DF3BD002BECB8D1001E2990 /* HeaderView.swift in Sources */,
 				8DF3BD272BED8344001E2990 /* ErrorView.swift in Sources */,
@@ -475,8 +485,10 @@
 				8DF3BD3F2BED8F11001E2990 /* AppDelegate.swift in Sources */,
 				8DF3BD152BECD5F8001E2990 /* Response.swift in Sources */,
 				8DF3BD0A2BECBBD3001E2990 /* FiltersView.swift in Sources */,
+				8DE0B1AA2BEEC1AE003CA92B /* ContactFormView.swift in Sources */,
 				8D2008B42BECADE20043700A /* Persistence.swift in Sources */,
 				8DF3BD192BED1A56001E2990 /* Webservice.swift in Sources */,
+				8DCBB4BA2BEEE37100E425CD /* SCReport+Extension.swift in Sources */,
 				8D2008AD2BECADE00043700A /* ContentView.swift in Sources */,
 				8DF3BD0C2BECBC0E001E2990 /* FilterButton.swift in Sources */,
 				8D72EA002BEE0E550000A84A /* MapDescriptionView.swift in Sources */,

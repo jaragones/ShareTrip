@@ -12,7 +12,7 @@ struct ContentView: View {
     // we want to react in different views based on these values
     @State private var selectedFilter: FilterOptions = .scheduled
     @State private var selectedTrip: Trip?
-    
+        
     @ObservedObject var tripsViewModel : TripsViewModel
     
     init() {
@@ -22,7 +22,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             VStack (spacing:0) {
-                // Logo container
+                // Logo and report container
                 HeaderView()
                 
                 // Map container
