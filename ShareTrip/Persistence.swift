@@ -37,14 +37,15 @@ struct PersistenceController {
         
         container.viewContext.automaticallyMergesChangesFromParent = true
         
-        // Create a background context
+        // Create a background context (used to write)
         backgroundContext = container.newBackgroundContext()
         backgroundContext.automaticallyMergesChangesFromParent = true
     }
     
     func save() {
         do {
-            try backgroundContext.save() // Save changes in the background context
+            // Save changes in the background context
+            try backgroundContext.save()
             try container.viewContext.performAndWait {
                 // Merge changes to the view context
                 if container.viewContext.hasChanges {
