@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import ShareTrip // Replace with your actual app module name
+@testable import ShareTrip
 import SwiftUI
 
 class MapDescriptionViewTests: XCTestCase {

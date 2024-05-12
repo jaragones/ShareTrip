@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import ShareTrip // Assuming your module is named "SeatTest"
+@testable import ShareTrip
 
 class ResponseTests: XCTestCase {
     
@@ -46,7 +46,6 @@ class ResponseTests: XCTestCase {
     func testEmptyTrip() {
         let emptyTrip = Trip(driverName: "", status: "Completed", route: "Route C", startTime: "18:30", origin: Destination(point: Point(latitude: 40.7128, longitude: -74.0060), address: "New York"), description: "Evening ride", destination: Destination(point: Point(latitude: 41.8781, longitude: -87.6298), address: "Chicago"), stops: [], endTime: "22:00")
         XCTAssertEqual(emptyTrip.driverName, "", "Driver name should be empty")
-        // Add similar assertions for other empty properties
     }
     
     func testUniqueUUIDs() {

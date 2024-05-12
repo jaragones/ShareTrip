@@ -8,7 +8,7 @@
 import XCTest
 import CoreData
 
-@testable import ShareTrip // Replace with your actual app module name
+@testable import ShareTrip 
 
 class ContactFormViewModelTests: XCTestCase {
     func testFormValidation() {
@@ -74,7 +74,7 @@ class ContactFormViewModelTests: XCTestCase {
             in: testContext
         )
 
-        // Fetch all reports using the main context (for badge count)
+        // Fetch all reports using the test context (for badge count)
         let issues = SCReport.fetchAll(in: testContext)
 
         XCTAssertEqual(issues.count, 1, "Save correctly")
