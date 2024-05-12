@@ -4,6 +4,7 @@
 //
 //  Created by Jordi Aragones Vilella on 10/5/24.
 //
+//  Description. Some extension parameters for UIImage type
 
 import UIKit
 

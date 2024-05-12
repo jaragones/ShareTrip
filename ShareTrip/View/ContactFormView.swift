@@ -38,9 +38,6 @@ struct ContactFormView: View {
                                     .stroke(Color.gray, lineWidth: 1)
                             )
                             .accessibilityIdentifier("textEditor")
-                            .onChange(of: viewModel.reportDescription) {
-                                viewModel.reportDescription = String(viewModel.reportDescription.prefix(200))
-                            }
                     }
                     
                     Section {

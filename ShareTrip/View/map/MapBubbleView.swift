@@ -4,14 +4,9 @@
 //
 //  Created by Jordi Aragones Vilella on 10/5/24.
 //
+//  Description. Custom infoWindow for markers.
 
 import SwiftUI
-
-enum BubbleType {
-    case start
-    case end
-    case stop
-}
 
 struct MapBubbleView: View {
     var address, time, username: String

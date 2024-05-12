@@ -24,10 +24,10 @@ struct ContentView: View {
             VStack (spacing:0) {
                 // Logo and report container
                 HeaderView()
-                
+                                
                 // Map container
                 ZStack {
-                    MapsView(trip: selectedTrip)
+                    MapsView(trip: selectedTrip, location: self.tripsViewModel.userLocation)
                         .frame(height: (selectedTrip == nil) ? 160 : 300)
                         .cornerRadius(10)
                         .padding(20)

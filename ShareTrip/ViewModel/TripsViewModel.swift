@@ -4,8 +4,12 @@
 //
 //  Created by Jordi Aragones Vilella on 9/5/24.
 //
+//  Description. Trip ViewModel to interact with main ContainView.
 
 import Foundation
+import CoreLocation
+
+import Combine
 
 @MainActor
 class TripsViewModel: ObservableObject {
@@ -14,6 +18,32 @@ class TripsViewModel: ObservableObject {
     @Published var filteredTrips: Trips = []
         
     var trips: Trips = []
+    
+    var locationManager: LocationManager
+    @Published var userLocation: CLLocation?
+    
+    private var cancellables: Set<AnyCancellable> = []
+    
+    init() {
+        locationManager = LocationManager()
+        locationManager.$lastLocation
+            .sink { [weak self] location in
+                // Handle location updates here
+                self?.handleUserLocationUpdate(location)
+            }
+            .store(in: &cancellables)
+    }
+    
+    private func handleUserLocationUpdate(_ location: CLLocation?) {
+        let status = CLLocationManager().authorizationStatus
+        switch status {
+            case .authorizedWhenInUse:
+                userLocation = location
+                locationManager.lm.stopUpdatingLocation()
+            default:
+            userLocation = Location.defaultLocation
+        }
+    }
     
     func retrieveTrips(from url: URL) async {
         self.isLoading = true

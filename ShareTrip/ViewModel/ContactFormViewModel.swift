@@ -4,19 +4,35 @@
 //
 //  Created by Jordi Aragones Vilella on 10/5/24.
 //
+//  Description. ContactForm ViewModel to interact with ContactFormView.
 
 import Foundation
 import CoreData
 import UserNotifications
+
+import Combine
 
 class ContactFormViewModel: ObservableObject {
     @Published var name: String = ""
     @Published var surname: String = ""
     @Published var email: String = ""
     @Published var phone: String = ""
-    @Published var reportDescription: String = ""
     @Published var reportDate = Date()
+    
+    private var isModifying = false
 
+    @Published var reportDescription: String = "" {
+       didSet {
+           // Tweak to avoid infinite loop
+           //    when truncate on-the-go
+           if !isModifying {
+               isModifying = true
+               reportDescription = String(reportDescription.prefix(Report.maxReportDescriptionLength))
+               isModifying = false
+           }
+       }
+    }
+    
     var isFormValid: Bool {
         // Check if all required fields (except phone) are non-empty
         !name.isEmpty && !surname.isEmpty && !email.isEmpty && !reportDescription.isEmpty

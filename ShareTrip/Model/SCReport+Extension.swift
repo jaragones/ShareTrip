@@ -4,6 +4,7 @@
 //
 //  Created by Jordi Aragones Vilella on 11/5/24.
 //
+//  Description. Some auxiliar methods for SCReport and Core Data interaction.
 
 import CoreData
 

@@ -4,6 +4,7 @@
 //
 //  Created by Jordi Aragones Vilella on 10/5/24.
 //
+//  Description. Simple overlay over map to show which map is being viewed.
 
 import SwiftUI
 

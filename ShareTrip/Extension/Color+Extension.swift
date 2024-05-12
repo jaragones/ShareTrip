@@ -4,6 +4,7 @@
 //
 //  Created by Jordi Aragones Vilella on 9/5/24.
 //
+//  Description. Some extension parameters for Color type
 
 import SwiftUI
 

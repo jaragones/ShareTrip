@@ -21,6 +21,7 @@
 		8D72EA002BEE0E550000A84A /* MapDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D72E9FF2BEE0E550000A84A /* MapDescriptionView.swift */; };
 		8D72EA022BEE14340000A84A /* MapBubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D72EA012BEE14340000A84A /* MapBubbleView.swift */; };
 		8D72EA042BEE1A010000A84A /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D72EA032BEE1A010000A84A /* UIImage+Extension.swift */; };
+		8DA0D7B42BF0FEE300642421 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA0D7B32BF0FEE300642421 /* LocationManager.swift */; };
 		8DB2583E2BF0C5A900E55F68 /* MapViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB2583D2BF0C5A900E55F68 /* MapViewTests.swift */; };
 		8DB258432BF0D0E900E55F68 /* SCReportTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB258422BF0D0E900E55F68 /* SCReportTests.swift */; };
 		8DB258462BF0D86800E55F68 /* EnumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB258452BF0D86800E55F68 /* EnumTests.swift */; };
@@ -93,6 +94,7 @@
 		8D72E9FF2BEE0E550000A84A /* MapDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDescriptionView.swift; sourceTree = "<group>"; };
 		8D72EA012BEE14340000A84A /* MapBubbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapBubbleView.swift; sourceTree = "<group>"; };
 		8D72EA032BEE1A010000A84A /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		8DA0D7B32BF0FEE300642421 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		8DB2583D2BF0C5A900E55F68 /* MapViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewTests.swift; sourceTree = "<group>"; };
 		8DB258422BF0D0E900E55F68 /* SCReportTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCReportTests.swift; sourceTree = "<group>"; };
 		8DB258452BF0D86800E55F68 /* EnumTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumTests.swift; sourceTree = "<group>"; };
@@ -211,7 +213,6 @@
 				8D55B4752BF020AF00E5E140 /* Service */,
 				8D55B4722BF01FDE00E5E140 /* Extension */,
 				8D2008C02BECADE30043700A /* ShareTripTests.swift */,
-				8DF3BD2E2BED8793001E2990 /* ResponseTests.swift */,
 			);
 			path = ShareTripTests;
 			sourceTree = "<group>";
@@ -257,6 +258,7 @@
 		8DB258412BF0D0CE00E55F68 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8DF3BD2E2BED8793001E2990 /* ResponseTests.swift */,
 				8DB258422BF0D0E900E55F68 /* SCReportTests.swift */,
 				8DB258452BF0D86800E55F68 /* EnumTests.swift */,
 				8DB2584B2BF0DB0E00E55F68 /* ContactFormViewModelTests.swift */,
@@ -354,6 +356,7 @@
 			isa = PBXGroup;
 			children = (
 				8DF3BD182BED1A56001E2990 /* Webservice.swift */,
+				8DA0D7B32BF0FEE300642421 /* LocationManager.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -555,6 +558,7 @@
 				8DF3BD042BECB9C5001E2990 /* Common.swift in Sources */,
 				8DF3BD0E2BECBE25001E2990 /* Enums.swift in Sources */,
 				8DF3BD1E2BED7A56001E2990 /* LoadingOverlay.swift in Sources */,
+				8DA0D7B42BF0FEE300642421 /* LocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

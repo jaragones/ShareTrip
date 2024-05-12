@@ -4,6 +4,7 @@
 //
 //  Created by Jordi Aragones Vilella on 9/5/24.
 //
+//  Description. External calls are done using Webservice class
 
 import Foundation
 
