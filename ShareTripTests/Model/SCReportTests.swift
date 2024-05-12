@@ -8,7 +8,7 @@
 import XCTest
 import CoreData
 
-@testable import ShareTrip // Make sure to import your project module
+@testable import ShareTrip
 
 class SCReportTests: XCTestCase {
     
@@ -20,6 +20,7 @@ class SCReportTests: XCTestCase {
         super.tearDown()
     }
     
+    // TODO: A better practise would be to mockup context
     func testSaveReport() {
         // Given
         let context = PersistenceController.shared.testContext
@@ -34,7 +35,6 @@ class SCReportTests: XCTestCase {
     
     
     func testFetchAll() {
-        
         // initializing test context
         do {
             let fetchRequest: NSFetchRequest<SCReport> = SCReport.fetchRequest()

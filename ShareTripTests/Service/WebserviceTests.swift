@@ -142,7 +142,7 @@ class WebserviceTests: XCTestCase {
     func testGetStopParsingError() {
         // Mock
         let invalidJsonData = Data("Invalid JSON data".utf8) // Invalid JSON data
-        let url = URL(string: Urls.stops)! // Provide a valid URL
+        let url = URL(string: Urls.stops)! // valid URL
         MockURLProtocol.requestHandler = { request in
             return (invalidJsonData, HTTPURLResponse(url: url, statusCode: 200, httpVersion: nil, headerFields: nil)!, nil)
         }

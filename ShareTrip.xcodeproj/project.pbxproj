@@ -22,6 +22,7 @@
 		8D72EA022BEE14340000A84A /* MapBubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D72EA012BEE14340000A84A /* MapBubbleView.swift */; };
 		8D72EA042BEE1A010000A84A /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D72EA032BEE1A010000A84A /* UIImage+Extension.swift */; };
 		8DA0D7B42BF0FEE300642421 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA0D7B32BF0FEE300642421 /* LocationManager.swift */; };
+		8DA32DFF2BF11FBF00029E70 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 8DA32DFE2BF11FBF00029E70 /* README.md */; };
 		8DB2583E2BF0C5A900E55F68 /* MapViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB2583D2BF0C5A900E55F68 /* MapViewTests.swift */; };
 		8DB258432BF0D0E900E55F68 /* SCReportTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB258422BF0D0E900E55F68 /* SCReportTests.swift */; };
 		8DB258462BF0D86800E55F68 /* EnumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB258452BF0D86800E55F68 /* EnumTests.swift */; };
@@ -95,6 +96,7 @@
 		8D72EA012BEE14340000A84A /* MapBubbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapBubbleView.swift; sourceTree = "<group>"; };
 		8D72EA032BEE1A010000A84A /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		8DA0D7B32BF0FEE300642421 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		8DA32DFE2BF11FBF00029E70 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		8DB2583D2BF0C5A900E55F68 /* MapViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewTests.swift; sourceTree = "<group>"; };
 		8DB258422BF0D0E900E55F68 /* SCReportTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCReportTests.swift; sourceTree = "<group>"; };
 		8DB258452BF0D86800E55F68 /* EnumTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumTests.swift; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 		8D20089E2BECADE00043700A = {
 			isa = PBXGroup;
 			children = (
+				8DA32DFE2BF11FBF00029E70 /* README.md */,
 				8DF3BD402BED90F2001E2990 /* GoogleMapsPrivacy.bundle */,
 				8D2008A92BECADE00043700A /* ShareTrip */,
 				8D2008BF2BECADE30043700A /* ShareTripTests */,
@@ -248,6 +251,7 @@
 		8DB2583C2BF0C59300E55F68 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8DB2584B2BF0DB0E00E55F68 /* ContactFormViewModelTests.swift */,
 				8D55B4702BF01C1800E5E140 /* MapDescriptionViewTests.swift */,
 				8DB2583D2BF0C5A900E55F68 /* MapViewTests.swift */,
 				8DB258472BF0D93900E55F68 /* MapBubbleViewTests.swift */,
@@ -261,7 +265,6 @@
 				8DF3BD2E2BED8793001E2990 /* ResponseTests.swift */,
 				8DB258422BF0D0E900E55F68 /* SCReportTests.swift */,
 				8DB258452BF0D86800E55F68 /* EnumTests.swift */,
-				8DB2584B2BF0DB0E00E55F68 /* ContactFormViewModelTests.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -506,6 +509,7 @@
 			files = (
 				8D2008B22BECADE20043700A /* Preview Assets.xcassets in Resources */,
 				8DF3BD432BED9268001E2990 /* credentials.plist in Resources */,
+				8DA32DFF2BF11FBF00029E70 /* README.md in Resources */,
 				8D2008AF2BECADE20043700A /* Assets.xcassets in Resources */,
 				8DF3BD412BED90F2001E2990 /* GoogleMapsPrivacy.bundle in Resources */,
 			);

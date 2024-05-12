@@ -6,12 +6,12 @@
 //
 
 import XCTest
-@testable import ShareTrip // Replace with your actual project name
+@testable import ShareTrip 
 
 class DateExtensionTests: XCTestCase {
     func testFromStringWithFormat() {
         let dateString = "2023-05-10T14:30:00.000Z"
-        let expectedDate = Date(timeIntervalSince1970: 1683729000) // Adjust with the expected timestamp
+        let expectedDate = Date(timeIntervalSince1970: 1683729000)
         
         let convertedDate = Date().fromStringWithFormat(str: dateString)
         XCTAssertEqual(convertedDate, expectedDate, "Conversion from string to Date failed")

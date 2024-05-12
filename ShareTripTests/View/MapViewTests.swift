@@ -8,7 +8,7 @@
 import XCTest
 import GoogleMaps
 
-@testable import ShareTrip // Make sure to import your project module
+@testable import ShareTrip
 
 class MapViewTests: XCTestCase {
     var mapView: MapsView!
