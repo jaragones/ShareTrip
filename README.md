@@ -2,6 +2,10 @@
 
 ShareTrip is a test project written in SwiftUI using MVVM for a job application.
 
+NOTE. In order to be able to execute this application a Google Maps API key needs to be provided.
+      Add your valid Google Maps API key in: ShareTrip -> Support folder -> credentials.plist. 
+      Type your api key into field value for key: 'GoogleMapsAPIKey'
+
 Basic specifications:
 You are asked to build a simple trip manager for our bus on demand solution. This tool will be used by the operators of the service in order to see the trips available in the system. The problem has three tasks and you should solve each one before the next.
 
