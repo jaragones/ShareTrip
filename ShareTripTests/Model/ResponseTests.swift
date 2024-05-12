@@ -17,9 +17,7 @@ class ResponseTests: XCTestCase {
         let trip2 = Trip(driverName: "Alice", status: "Active", route: "Route A", startTime: "09:00", origin: Destination(point: Point(latitude: 37.7749, longitude: -122.4194), address: "San Francisco"), description: "Morning commute", destination: Destination(point: Point(latitude: 37.3382, longitude: -121.8863), address: "San Jose"), stops: [], endTime: "10:00")
         XCTAssertEqual(trip1, trip2, "Trips should be equal")
     }
-    
-    // Similar tests for Destination, Point, and Stop structs
-    
+        
     // MARK: - Codability Tests
     
     func testTripCodability() {
@@ -33,9 +31,7 @@ class ResponseTests: XCTestCase {
             XCTFail("Error encoding/decoding Trip: \(error)")
         }
     }
-    
-    // Similar tests for Destination, Point, and Stop structs
-    
+        
     // MARK: - Initialization and Property Access Tests
     
     func testTripInitialization() {
@@ -43,11 +39,8 @@ class ResponseTests: XCTestCase {
         
         XCTAssertEqual(trip.driverName, "Charlie")
         XCTAssertEqual(trip.origin.address, "New York")
-        // Add more property access tests
     }
-    
-    // Similar tests for Destination, Point, and Stop structs
-    
+        
     // MARK: - Edge Case Tests
     
     func testEmptyTrip() {

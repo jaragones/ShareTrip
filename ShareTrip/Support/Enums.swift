@@ -4,6 +4,8 @@
 //
 //  Created by Jordi Aragones Vilella on 9/5/24.
 //
+//  Description.
+//  File that contains enums used in the app.e
 
 // Filter options for shown trips
 enum FilterOptions: Int {
@@ -29,4 +31,11 @@ enum ResponseError: Error, Equatable {
                 return false
             }
         }
+}
+
+// used on MapBubbleView for their types.
+enum BubbleType {
+    case start
+    case end
+    case stop
 }

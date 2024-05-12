@@ -4,6 +4,7 @@
 //
 //  Created by Jordi Aragones Vilella on 9/5/24.
 //
+//  Description. Simple loading view, to show user that app is doing something
 
 import SwiftUI
 

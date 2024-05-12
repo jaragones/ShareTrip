@@ -4,6 +4,7 @@
 //
 //  Created by Jordi Aragones Vilella on 10/5/24.
 //
+//  Description. This view is used to show results or error in ContentView.
 
 import SwiftUI
 

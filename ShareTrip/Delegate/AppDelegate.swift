@@ -24,6 +24,11 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         return true
     }
     
+    // Google Maps initialization
+    //    APIkey is stored under credentials.plist file with name 'GoogleMapsAPIKey'
+    //    NOTE. This value is set and push to github! This shouldn't be done!
+    //          Just doing it, because not sure if reviewer of this test
+    //          will have one.
     private func initializeGoogleMaps() {
         if let path = Bundle.main.path(forResource: "credentials", ofType: "plist"),
             let keys = NSDictionary(contentsOfFile: path),

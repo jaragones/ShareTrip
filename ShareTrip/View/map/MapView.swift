@@ -4,6 +4,7 @@
 //
 //  Created by Jordi Aragones Vilella on 9/5/24.
 //
+//  Description. Container for Google Map View.
 
 import SwiftUI
 import GoogleMaps
@@ -13,6 +14,7 @@ struct MapsView: UIViewRepresentable {
     @State private var selectedMarker: GMSMarker? = nil
     
     var trip: Trip?
+    var location: CLLocation?
 
     var path: GMSPath? {
         return GMSPath(fromEncodedPath: self.trip?.route ?? "")
@@ -23,10 +25,13 @@ struct MapsView: UIViewRepresentable {
         let mapView = GMSMapView(options: mapViewOptions)
         mapView.delegate = context.coordinator
 
+        let longitude = location?.coordinate.longitude ?? 2.1734
+        let latitude = location?.coordinate.latitude ?? 41.3851
         // Set the initial camera position to a specific coordinate (e.g., Barcelona)
-        let barcelonaCoordinate = CLLocationCoordinate2D(latitude: 41.3851, longitude: 2.1734)
+        let barcelonaCoordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
         let cameraPosition = GMSCameraPosition.camera(withTarget: barcelonaCoordinate, zoom: 12.0)
         mapView.camera = cameraPosition
+        mapView.isMyLocationEnabled = true
 
         return mapView
     }

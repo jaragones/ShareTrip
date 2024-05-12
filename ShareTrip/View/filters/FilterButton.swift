@@ -4,6 +4,7 @@
 //
 //  Created by Jordi Aragones Vilella on 9/5/24.
 //
+//  Description. View used to avoid code duplication on filter buttons.
 
 import SwiftUI
 
