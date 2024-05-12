@@ -75,7 +75,7 @@ struct Stop: Codable, Equatable {
     }
 }
 
-struct StopExtended: Codable {
+struct StopExtended: Codable, Equatable {
     let price: Double
     let address: String
     let tripID: Int
@@ -88,6 +88,12 @@ struct StopExtended: Codable {
         case price, address
         case tripID = "tripId"
         case paid, stopTime, point, userName
+    }
+    
+    static func == (lhs: StopExtended, rhs: StopExtended) -> Bool {
+        return lhs.point == rhs.point && lhs.price == rhs.price
+            && lhs.tripID == rhs.tripID && lhs.paid == rhs.paid
+            && lhs.stopTime == rhs.stopTime && lhs.userName == rhs.userName
     }
 }
 

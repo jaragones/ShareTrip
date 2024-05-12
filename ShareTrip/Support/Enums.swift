@@ -13,8 +13,20 @@ enum FilterOptions: Int {
 }
 
 // Customized error to handle errors from webservice
-enum ResponseError: Error {
+enum ResponseError: Error, Equatable {
     case wrongURLError
     case wrongDataError
     case parseDataError(String)
+    
+    static func ==(lhs: ResponseError, rhs: ResponseError) -> Bool {
+            switch (lhs, rhs) {
+            case (.wrongURLError, .wrongURLError),
+                 (.wrongDataError, .wrongDataError):
+                return true
+            case let (.parseDataError(lhsDescription), .parseDataError(rhsDescription)):
+                return lhsDescription == rhsDescription
+            default:
+                return false
+            }
+        }
 }

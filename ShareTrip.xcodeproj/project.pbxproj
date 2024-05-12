@@ -16,9 +16,17 @@
 		8D2008C12BECADE30043700A /* ShareTripTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2008C02BECADE30043700A /* ShareTripTests.swift */; };
 		8D2008CB2BECADE30043700A /* ShareTripUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2008CA2BECADE30043700A /* ShareTripUITests.swift */; };
 		8D2008CD2BECADE30043700A /* ShareTripUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2008CC2BECADE30043700A /* ShareTripUITestsLaunchTests.swift */; };
+		8D55B4712BF01C1800E5E140 /* MapDescriptionViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D55B4702BF01C1800E5E140 /* MapDescriptionViewTests.swift */; };
+		8D55B4742BF01FF700E5E140 /* UIImageExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D55B4732BF01FF700E5E140 /* UIImageExtensionTests.swift */; };
 		8D72EA002BEE0E550000A84A /* MapDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D72E9FF2BEE0E550000A84A /* MapDescriptionView.swift */; };
 		8D72EA022BEE14340000A84A /* MapBubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D72EA012BEE14340000A84A /* MapBubbleView.swift */; };
 		8D72EA042BEE1A010000A84A /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D72EA032BEE1A010000A84A /* UIImage+Extension.swift */; };
+		8DB2583E2BF0C5A900E55F68 /* MapViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB2583D2BF0C5A900E55F68 /* MapViewTests.swift */; };
+		8DB258432BF0D0E900E55F68 /* SCReportTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB258422BF0D0E900E55F68 /* SCReportTests.swift */; };
+		8DB258462BF0D86800E55F68 /* EnumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB258452BF0D86800E55F68 /* EnumTests.swift */; };
+		8DB258482BF0D93900E55F68 /* MapBubbleViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB258472BF0D93900E55F68 /* MapBubbleViewTests.swift */; };
+		8DB2584C2BF0DB0E00E55F68 /* ContactFormViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB2584B2BF0DB0E00E55F68 /* ContactFormViewModelTests.swift */; };
+		8DB2584E2BF0DE3000E55F68 /* ContactFormUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB2584D2BF0DE3000E55F68 /* ContactFormUITests.swift */; };
 		8DCBB4BA2BEEE37100E425CD /* SCReport+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCBB4B92BEEE37100E425CD /* SCReport+Extension.swift */; };
 		8DE0B1A82BEEC198003CA92B /* ContactFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE0B1A72BEEC198003CA92B /* ContactFormViewModel.swift */; };
 		8DE0B1AA2BEEC1AE003CA92B /* ContactFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE0B1A92BEEC1AE003CA92B /* ContactFormView.swift */; };
@@ -80,9 +88,17 @@
 		8D2008C62BECADE30043700A /* ShareTripUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShareTripUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D2008CA2BECADE30043700A /* ShareTripUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareTripUITests.swift; sourceTree = "<group>"; };
 		8D2008CC2BECADE30043700A /* ShareTripUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareTripUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8D55B4702BF01C1800E5E140 /* MapDescriptionViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDescriptionViewTests.swift; sourceTree = "<group>"; };
+		8D55B4732BF01FF700E5E140 /* UIImageExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtensionTests.swift; sourceTree = "<group>"; };
 		8D72E9FF2BEE0E550000A84A /* MapDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDescriptionView.swift; sourceTree = "<group>"; };
 		8D72EA012BEE14340000A84A /* MapBubbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapBubbleView.swift; sourceTree = "<group>"; };
 		8D72EA032BEE1A010000A84A /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		8DB2583D2BF0C5A900E55F68 /* MapViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewTests.swift; sourceTree = "<group>"; };
+		8DB258422BF0D0E900E55F68 /* SCReportTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCReportTests.swift; sourceTree = "<group>"; };
+		8DB258452BF0D86800E55F68 /* EnumTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumTests.swift; sourceTree = "<group>"; };
+		8DB258472BF0D93900E55F68 /* MapBubbleViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapBubbleViewTests.swift; sourceTree = "<group>"; };
+		8DB2584B2BF0DB0E00E55F68 /* ContactFormViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactFormViewModelTests.swift; sourceTree = "<group>"; };
+		8DB2584D2BF0DE3000E55F68 /* ContactFormUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactFormUITests.swift; sourceTree = "<group>"; };
 		8DCBB4B92BEEE37100E425CD /* SCReport+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SCReport+Extension.swift"; sourceTree = "<group>"; };
 		8DCBB4BB2BEEF20A00E425CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DE0B1A72BEEC198003CA92B /* ContactFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactFormViewModel.swift; sourceTree = "<group>"; };
@@ -190,10 +206,11 @@
 		8D2008BF2BECADE30043700A /* ShareTripTests */ = {
 			isa = PBXGroup;
 			children = (
+				8DB258412BF0D0CE00E55F68 /* Model */,
+				8DB2583C2BF0C59300E55F68 /* View */,
+				8D55B4752BF020AF00E5E140 /* Service */,
+				8D55B4722BF01FDE00E5E140 /* Extension */,
 				8D2008C02BECADE30043700A /* ShareTripTests.swift */,
-				8DF3BD282BED84E7001E2990 /* WebserviceTests.swift */,
-				8DF3BD2A2BED85B0001E2990 /* ColorExtensionTests.swift */,
-				8DF3BD2C2BED8664001E2990 /* DateExtensionTests.swift */,
 				8DF3BD2E2BED8793001E2990 /* ResponseTests.swift */,
 			);
 			path = ShareTripTests;
@@ -204,8 +221,47 @@
 			children = (
 				8D2008CA2BECADE30043700A /* ShareTripUITests.swift */,
 				8D2008CC2BECADE30043700A /* ShareTripUITestsLaunchTests.swift */,
+				8DB2584D2BF0DE3000E55F68 /* ContactFormUITests.swift */,
 			);
 			path = ShareTripUITests;
+			sourceTree = "<group>";
+		};
+		8D55B4722BF01FDE00E5E140 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				8DF3BD2A2BED85B0001E2990 /* ColorExtensionTests.swift */,
+				8DF3BD2C2BED8664001E2990 /* DateExtensionTests.swift */,
+				8D55B4732BF01FF700E5E140 /* UIImageExtensionTests.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		8D55B4752BF020AF00E5E140 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				8DF3BD282BED84E7001E2990 /* WebserviceTests.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		8DB2583C2BF0C59300E55F68 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8D55B4702BF01C1800E5E140 /* MapDescriptionViewTests.swift */,
+				8DB2583D2BF0C5A900E55F68 /* MapViewTests.swift */,
+				8DB258472BF0D93900E55F68 /* MapBubbleViewTests.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8DB258412BF0D0CE00E55F68 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8DB258422BF0D0E900E55F68 /* SCReportTests.swift */,
+				8DB258452BF0D86800E55F68 /* EnumTests.swift */,
+				8DB2584B2BF0DB0E00E55F68 /* ContactFormViewModelTests.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		8DF3BCFE2BECB8C1001E2990 /* header */ = {
@@ -506,8 +562,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D55B4712BF01C1800E5E140 /* MapDescriptionViewTests.swift in Sources */,
+				8DB2583E2BF0C5A900E55F68 /* MapViewTests.swift in Sources */,
+				8DB258482BF0D93900E55F68 /* MapBubbleViewTests.swift in Sources */,
+				8DB258432BF0D0E900E55F68 /* SCReportTests.swift in Sources */,
 				8DF3BD2F2BED8793001E2990 /* ResponseTests.swift in Sources */,
+				8DB2584C2BF0DB0E00E55F68 /* ContactFormViewModelTests.swift in Sources */,
+				8D55B4742BF01FF700E5E140 /* UIImageExtensionTests.swift in Sources */,
 				8DF3BD2B2BED85B0001E2990 /* ColorExtensionTests.swift in Sources */,
+				8DB258462BF0D86800E55F68 /* EnumTests.swift in Sources */,
 				8DF3BD2D2BED8664001E2990 /* DateExtensionTests.swift in Sources */,
 				8DF3BD292BED84E7001E2990 /* WebserviceTests.swift in Sources */,
 				8D2008C12BECADE30043700A /* ShareTripTests.swift in Sources */,
@@ -519,6 +582,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D2008CB2BECADE30043700A /* ShareTripUITests.swift in Sources */,
+				8DB2584E2BF0DE3000E55F68 /* ContactFormUITests.swift in Sources */,
 				8D2008CD2BECADE30043700A /* ShareTripUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
