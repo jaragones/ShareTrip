@@ -71,11 +71,11 @@ struct MapBubbleView: View {
         .cornerRadius(8)
     }
 
-    private func stringifyPrice(price: Double) -> String {
-        return String(format: "%.2f", price)
+    func stringifyPrice(price: Double) -> String {
+        return String(format: "$%.2f", price)
     }
 
-    private func getTitleFor(type: BubbleType) -> String {
+    func getTitleFor(type: BubbleType) -> String {
         switch type {
         case .stop:
             return "Requested stop"

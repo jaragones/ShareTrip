@@ -41,9 +41,9 @@ class Webservice {
             return
         }
         
-        URLSession.shared.dataTask(with: url) { data, response, error in
-            if let error = error {
-                completion(.failure(error))
+        self.session.dataTask(with: url) { data, response, error in
+            if error != nil {
+                completion(.failure(ResponseError.wrongURLError))
                 return
             }
             

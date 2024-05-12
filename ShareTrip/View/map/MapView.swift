@@ -66,7 +66,7 @@ struct MapsView: UIViewRepresentable {
     }
 
     
-    private func getMarkers(from trip: Trip?) -> [GMSMarker] {
+    func getMarkers(from trip: Trip?) -> [GMSMarker] {
         var markers: [GMSMarker] = []
         
         guard let trip = trip else {
@@ -134,13 +134,26 @@ struct MapsView: UIViewRepresentable {
                 return true
             }
         }
-        
+                
         func mapView(_ mapView: GMSMapView, markerInfoWindow marker: GMSMarker) -> UIView? {
             guard marker == mapView.selectedMarker,
                   let data = marker.userData as? [String: Any] else {
                 return nil
             }
 
+            let (bubbleType, address, time, username, price) = getMarkerInfo(for: marker, data: data)
+            if (bubbleType != nil) {
+                let infoWindow = MapBubbleView(type: bubbleType!, address: address!, time: time!, price: price!, username: username!)
+                let bubbleWindow = UIHostingController(rootView: infoWindow)
+                bubbleWindow.view.frame = CGRect(x: 0, y: 0, width: 300, height: 100)
+                bubbleWindow.view.backgroundColor = UIColor.clear
+                return bubbleWindow.view
+            } else {
+                return nil
+            }
+        }
+        
+        func getMarkerInfo(for marker: GMSMarker, data: [String:Any]) -> (bubbleType: BubbleType?, address: String?, time: String?, username: String?, price: Double?) {
             var address = ""
             var time = ""
             var username = ""
@@ -152,20 +165,16 @@ struct MapsView: UIViewRepresentable {
                 username = stop.userName
                 time = stop.stopTime
                 price = stop.price
+                return (.stop, address, time, username, price)
             } else if let trip = data["value"] as? Trip, let type = data["type"] as? String {
                 address = (type == "origin") ? trip.origin.address : trip.destination.address
                 time = (type == "origin") ? trip.startTime : trip.endTime
                 username = trip.driverName
                 bubbleType = (type == "origin") ? .start : .end
+                return (bubbleType, address, time, username, price)
             } else {
-                return nil
+                return (nil, nil, nil, nil, nil)
             }
-
-            let infoWindow = MapBubbleView(type: bubbleType, address: address, time: time, price: price, username: username)
-            let bubbleWindow = UIHostingController(rootView: infoWindow)
-            bubbleWindow.view.frame = CGRect(x: 0, y: 0, width: 300, height: 100)
-            bubbleWindow.view.backgroundColor = UIColor.clear
-            return bubbleWindow.view
         }
     }
     

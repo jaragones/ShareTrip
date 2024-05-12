@@ -12,6 +12,8 @@ struct PersistenceController {
 
     let container: NSPersistentContainer
     let backgroundContext: NSManagedObjectContext
+    
+    let testContext: NSManagedObjectContext
 
     init(inMemory: Bool = false) {
         container = NSPersistentContainer(name: "ShareTrip")
@@ -40,6 +42,8 @@ struct PersistenceController {
         // Create a background context (used to write)
         backgroundContext = container.newBackgroundContext()
         backgroundContext.automaticallyMergesChangesFromParent = true
+        
+        testContext = container.newBackgroundContext()
     }
     
     func save() {

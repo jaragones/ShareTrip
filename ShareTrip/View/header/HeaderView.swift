@@ -28,7 +28,7 @@ struct HeaderView: View {
                     }
                     .sheet(isPresented: $showingContactForm) {
                         ContactFormView(isPresented: $showingContactForm).accessibilityIdentifier("ContactFormView")
-                    }
+                    }.accessibilityIdentifier("Report an Issue")
             }
             Rectangle()
                 .fill(Color.primaryAppColor)
