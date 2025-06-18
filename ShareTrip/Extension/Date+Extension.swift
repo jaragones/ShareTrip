@@ -57,4 +57,8 @@ extension Date {
         dateFormatter.dateFormat = "MMM"
         return dateFormatter.string(from: self)
     }
+    
+    static func getDate() -> Date {
+        return Date()
+    }
 }
