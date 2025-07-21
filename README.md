@@ -11,14 +11,14 @@ You are asked to build a simple trip manager for our bus on demand solution. Thi
 
 Required tasks:
 
-Task 1: Trip list:
+**Task 1: Trip list:**
     - Goal:
         The initial screen should show a map and scrollable list of the current available trips.
     - Guide:
         - Each trip card should show some information: driver name, timestamps,...
         - You can choose what you think is more important.
 
-Task 2: Select trip:
+**Task 2: Select trip:**
     - Goal:
         When we click on one trip, it should be shown on the map. (map centers and zooms towards it)
     - Guide:
@@ -28,14 +28,14 @@ Task 2: Select trip:
         - The route returned by the API is a google encoded polyline. (check this) 
         - You can use this third-party library to represent the polyline on the map if you want to.
 
-Task 3: Stop info:
+**Task 3: Stop info:**
     - Goal:
         When we click on one stop, a popup with the information of the stop should be shown.
     - Guide:
         - Each stop bubble should show some information about it: passenger, time,... You can choose what you think is more important.
 
 
-Task 4: Contact form:
+**Task 4: Contact form:**
     - Goal:
         On the main screen we should be able to open a contact form in order to report an issue.
     - Guide:
