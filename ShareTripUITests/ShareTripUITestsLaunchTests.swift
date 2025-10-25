@@ -29,4 +29,9 @@ final class ShareTripUITestsLaunchTests: XCTestCase {
         attachment.lifetime = .keepAlways
         add(attachment)
     }
+    
+    func testLaunchWithoutAttachments() throws {
+        let app = XCUIApplication()
+        app.launch()
+    }
 }
