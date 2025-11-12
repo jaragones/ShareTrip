@@ -55,8 +55,7 @@ extension UIView {
     }
 
     // MARK: - Animations
-    func fadeIn(duration: TimeInterval = 0.3) {
-        alpha = 0
+    func fadeIn(duration: TimeInterval = 0.6) {
         UIView.animate(withDuration: duration) {
             self.alpha = 1
         }
