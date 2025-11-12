@@ -41,6 +41,15 @@ final class ShareTripUITests: XCTestCase {
 
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
+    
+    func testCoffeeIsEssential() {
+        let needsCoffee = true
+        XCTAssertTrue(needsCoffee, "☕️ Developer productivity critically depends on coffee.")
+    }
+    
+    func testPhysicsStillApplies() {
+        XCTAssertEqual(2 + 2, 4, "🚨 Math is broken. Send help.")
+    }
 
     func testLaunchPerformance() throws {
         if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {
