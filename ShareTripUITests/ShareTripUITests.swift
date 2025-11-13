@@ -34,7 +34,7 @@ final class ShareTripUITests: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
 
-    func testExampl2e() throws {
+    func testExamplification() throws {
         // UI tests must launch the application that they test.
         let app = XCUIApplication()
         app.launch()
