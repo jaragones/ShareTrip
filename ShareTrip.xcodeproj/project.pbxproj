@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8D1415072EC551540088233B /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1415062EC5514E0088233B /* UIView+Extension.swift */; };
 		8D2008AB2BECADE00043700A /* ShareTripApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2008AA2BECADE00043700A /* ShareTripApp.swift */; };
 		8D2008AD2BECADE00043700A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2008AC2BECADE00043700A /* ContentView.swift */; };
 		8D2008AF2BECADE20043700A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D2008AE2BECADE20043700A /* Assets.xcassets */; };
@@ -79,7 +78,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		8D1415062EC5514E0088233B /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		8D2008A72BECADE00043700A /* ShareTrip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShareTrip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D2008AA2BECADE00043700A /* ShareTripApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareTripApp.swift; sourceTree = "<group>"; };
 		8D2008AC2BECADE00043700A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -369,7 +367,6 @@
 		8DFC72652BECAF6B006E3020 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				8D1415062EC5514E0088233B /* UIView+Extension.swift */,
 				8DF3BD012BECB931001E2990 /* Color+Extension.swift */,
 				8DF3BD162BECE451001E2990 /* Date+Extension.swift */,
 				8D72EA032BEE1A010000A84A /* UIImage+Extension.swift */,
@@ -561,7 +558,6 @@
 				8DF3BD0C2BECBC0E001E2990 /* FilterButton.swift in Sources */,
 				8D72EA002BEE0E550000A84A /* MapDescriptionView.swift in Sources */,
 				8D2008AB2BECADE00043700A /* ShareTripApp.swift in Sources */,
-				8D1415072EC551540088233B /* UIView+Extension.swift in Sources */,
 				8DF3BD1B2BED1B23001E2990 /* TripsViewModel.swift in Sources */,
 				8DF3BD042BECB9C5001E2990 /* Common.swift in Sources */,
 				8DF3BD0E2BECBE25001E2990 /* Enums.swift in Sources */,

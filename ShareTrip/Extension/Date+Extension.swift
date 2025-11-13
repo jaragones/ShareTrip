@@ -64,6 +64,12 @@ extension Date {
         return dateFormatter.string(from: self)
     }
     
+    private func getLongMonthName_2() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "LLLL"
+        return dateFormatter.string(from: self)
+    }
+    
     private func getMonthAndYear() -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "LLLL yyyy"
