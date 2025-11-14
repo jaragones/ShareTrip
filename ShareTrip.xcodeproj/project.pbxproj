@@ -10,6 +10,7 @@
 		8D14150B2EC69D940088233B /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D14150A2EC69D8C0088233B /* UIView+Extension.swift */; };
 		8D14150D2EC733A10088233B /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D14150C2EC733A10088233B /* UIButton+Extension.swift */; };
 		8D14150F2EC738630088233B /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D14150E2EC738630088233B /* UILabel+Extension.swift */; };
+		8D1415112EC73C740088233B /* UITextField+Extension 2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1415102EC73C740088233B /* UITextField+Extension 2.swift */; };
 		8D2008AB2BECADE00043700A /* ShareTripApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2008AA2BECADE00043700A /* ShareTripApp.swift */; };
 		8D2008AD2BECADE00043700A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2008AC2BECADE00043700A /* ContentView.swift */; };
 		8D2008AF2BECADE20043700A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D2008AE2BECADE20043700A /* Assets.xcassets */; };
@@ -84,6 +85,7 @@
 		8D14150A2EC69D8C0088233B /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		8D14150C2EC733A10088233B /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		8D14150E2EC738630088233B /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
+		8D1415102EC73C740088233B /* UITextField+Extension 2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension 2.swift"; sourceTree = "<group>"; };
 		8D2008A72BECADE00043700A /* ShareTrip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShareTrip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D2008AA2BECADE00043700A /* ShareTripApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareTripApp.swift; sourceTree = "<group>"; };
 		8D2008AC2BECADE00043700A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -376,6 +378,7 @@
 				8D14150A2EC69D8C0088233B /* UIView+Extension.swift */,
 				8D14150C2EC733A10088233B /* UIButton+Extension.swift */,
 				8D14150E2EC738630088233B /* UILabel+Extension.swift */,
+				8D1415102EC73C740088233B /* UITextField+Extension 2.swift */,
 				8DF3BD012BECB931001E2990 /* Color+Extension.swift */,
 				8DF3BD162BECE451001E2990 /* Date+Extension.swift */,
 				8D72EA032BEE1A010000A84A /* UIImage+Extension.swift */,
@@ -547,6 +550,7 @@
 			files = (
 				8DF3BD132BECBF2E001E2990 /* TripCellView.swift in Sources */,
 				8DE0B1A82BEEC198003CA92B /* ContactFormViewModel.swift in Sources */,
+				8D1415112EC73C740088233B /* UITextField+Extension 2.swift in Sources */,
 				8D72EA022BEE14340000A84A /* MapBubbleView.swift in Sources */,
 				8DF3BD002BECB8D1001E2990 /* HeaderView.swift in Sources */,
 				8DF3BD272BED8344001E2990 /* ErrorView.swift in Sources */,
