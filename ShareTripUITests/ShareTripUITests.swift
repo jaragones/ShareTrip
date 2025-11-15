@@ -34,7 +34,7 @@ final class ShareTripUITests: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
 
-    func testExamplification3() throws {
+    func testExamplification() throws {
         // UI tests must launch the application that they test.
         let app = XCUIApplication()
         app.launch()
@@ -42,15 +42,15 @@ final class ShareTripUITests: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
     
-    func testCoffeeIsEssential2() {
-        let needsCoffee = true
-        XCTAssertTrue(needsCoffee, "☕️ Developer productivity critically depends on coffee.")
-    }
-    
-    func testTeaIsEssential2() {
-        let needsCoffee = true
-        XCTAssertTrue(needsCoffee, "☕️ Developer productivity critically depends on coffee.")
-    }
+//    func testCoffeeIsEssential2() {
+//        let needsCoffee = true
+//        XCTAssertTrue(needsCoffee, "☕️ Developer productivity critically depends on coffee.")
+//    }
+//    
+//    func testTeaIsEssential2() {
+//        let needsCoffee = true
+//        XCTAssertTrue(needsCoffee, "☕️ Developer productivity critically depends on coffee.")
+//    }
 //    
 //    func testPhysicsStillApplies2() {
 //        XCTAssertEqual(2 + 2, 4, "🚨 Math is broken. Send help.")
