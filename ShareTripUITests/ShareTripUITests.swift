@@ -42,19 +42,19 @@ final class ShareTripUITests: XCTestCase {
 //        // Use XCTAssert and related functions to verify your tests produce the correct results.
 //    }
     
-//    func testCoffeeIsEssentialResync() {
-//        let needsCoffee = true
-//        XCTAssertTrue(needsCoffee, "☕️ Developer productivity critically depends on coffee.")
-//    }
-    
-    func testTeaIsEssential() {
+    func testCoffeeIsEssentialResync() {
         let needsCoffee = true
         XCTAssertTrue(needsCoffee, "☕️ Developer productivity critically depends on coffee.")
     }
     
-    func testPhysicsStillApplies() {
-        XCTAssertEqual(2 + 2, 4, "🚨 Math is broken. Send help.")
-    }
+//    func testTeaIsEssential() {
+//        let needsCoffee = true
+//        XCTAssertTrue(needsCoffee, "☕️ Developer productivity critically depends on coffee.")
+//    }
+//    
+//    func testPhysicsStillApplies() {
+//        XCTAssertEqual(2 + 2, 4, "🚨 Math is broken. Send help.")
+//    }
 //
 //    func testCokeIsEssential() {
 //        let needsCocaCola = true
