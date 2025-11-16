@@ -47,10 +47,10 @@ final class ShareTripUITests: XCTestCase {
         XCTAssertTrue(needsCoffee, "☕️ Developer productivity critically depends on coffee.")
     }
     
-//    func testTeaIsEssential() {
-//        let needsCoffee = true
-//        XCTAssertTrue(needsCoffee, "☕️ Developer productivity critically depends on coffee.")
-//    }
+    func testTeaIsEssential() {
+        let needsCoffee = true
+        XCTAssertTrue(needsCoffee, "☕️ Developer productivity critically depends on coffee.")
+    }
 //    
 //    func testPhysicsStillApplies() {
 //        XCTAssertEqual(2 + 2, 4, "🚨 Math is broken. Send help.")
