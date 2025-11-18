@@ -25,7 +25,7 @@ final class ShareTripUITests: XCTestCase {
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
-//    
+  
     func testExample() throws {
         // UI tests must launch the application that they test.
         let app = XCUIApplication()
@@ -52,9 +52,9 @@ final class ShareTripUITests: XCTestCase {
 //        XCTAssertTrue(needsCoffee, "☕️ Developer productivity critically depends on coffee.")
 //    }
 //    
-//    func testPhysicsStillApplies() {
-//        XCTAssertEqual(2 + 2, 4, "🚨 Math is broken. Send help.")
-//    }
+    func testPhysicsStillApplies() {
+        XCTAssertEqual(2 + 2, 4, "🚨 Math is broken. Send help.")
+    }
 //
 //    func testCokeIsEssential() {
 //        let needsCocaCola = true
