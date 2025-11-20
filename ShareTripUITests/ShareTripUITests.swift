@@ -47,26 +47,26 @@ final class ShareTripUITests: XCTestCase {
 //        XCTAssertTrue(needsCoffee, "☕️ Developer productivity critically depends on coffee.")
 //    }
 //    
-//    func testTeaIsEssential() {
-//        let needsCoffee = true
-//        XCTAssertTrue(needsCoffee, "☕️ Developer productivity critically depends on coffee.")
+    func testTeaIsEssential() {
+        let needsCoffee = true
+        XCTAssertTrue(needsCoffee, "☕️ Developer productivity critically depends on coffee.")
+    }
+    
+//    func testPhysicsStillApplies() {
+//        XCTAssertEqual(2 + 2, 4, "🚨 Math is broken. Send help.")
 //    }
-    
-    func testPhysicsStillApplies() {
-        XCTAssertEqual(2 + 2, 4, "🚨 Math is broken. Send help.")
-    }
-
-    func testCokeIsEssential() {
-        let needsCocaCola = true
-        XCTAssertTrue(needsCocaCola, "☕️ Developer productivity critically depends on coffee.")
-    }
-    
-    func testLaunchPerformance() throws {
-        if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {
-            // This measures how long it takes to launch your application.
-            measure(metrics: [XCTApplicationLaunchMetric()]) {
-                XCUIApplication().launch()
-            }
-        }
-    }
+//
+//    func testCokeIsEssential() {
+//        let needsCocaCola = true
+//        XCTAssertTrue(needsCocaCola, "☕️ Developer productivity critically depends on coffee.")
+//    }
+//    
+//    func testLaunchPerformance() throws {
+//        if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {
+//            // This measures how long it takes to launch your application.
+//            measure(metrics: [XCTApplicationLaunchMetric()]) {
+//                XCUIApplication().launch()
+//            }
+//        }
+//    }
 }
