@@ -26,13 +26,13 @@ final class ShareTripUITests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
     
-    func testExample() throws {
-        // UI tests must launch the application that they test.
-        let app = XCUIApplication()
-        app.launch()
-
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
+//    func testExample() throws {
+//        // UI tests must launch the application that they test.
+//        let app = XCUIApplication()
+//        app.launch()
+//
+//        // Use XCTAssert and related functions to verify your tests produce the correct results.
+//    }
 //
 //    func testExamplificationResync() throws {
 //        // UI tests must launch the application that they test.
@@ -42,10 +42,10 @@ final class ShareTripUITests: XCTestCase {
 //        // Use XCTAssert and related functions to verify your tests produce the correct results.
 //    }
 //    
-//    func testCoffeeIsEssentialResync() {
-//        let needsCoffee = true
-//        XCTAssertTrue(needsCoffee, "☕️ Developer productivity critically depends on coffee.")
-//    }
+    func testCoffeeIsEssentialResync() {
+        let needsCoffee = true
+        XCTAssertTrue(needsCoffee, "☕️ Developer productivity critically depends on coffee.")
+    }
 //    
 //    func testTeaIsEssential() {
 //        let needsCoffee = true
