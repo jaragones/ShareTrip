@@ -29,6 +29,7 @@
 		8DB258462BF0D86800E55F68 /* EnumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB258452BF0D86800E55F68 /* EnumTests.swift */; };
 		8DB258482BF0D93900E55F68 /* MapBubbleViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB258472BF0D93900E55F68 /* MapBubbleViewTests.swift */; };
 		8DB2584C2BF0DB0E00E55F68 /* ContactFormViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB2584B2BF0DB0E00E55F68 /* ContactFormViewModelTests.swift */; };
+		8DB2584E2BF0DE3000E55F68 /* ContactFormUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB2584D2BF0DE3000E55F68 /* ContactFormUITests.swift */; };
 		8DCBB4BA2BEEE37100E425CD /* SCReport+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCBB4B92BEEE37100E425CD /* SCReport+Extension.swift */; };
 		8DE0B1A82BEEC198003CA92B /* ContactFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE0B1A72BEEC198003CA92B /* ContactFormViewModel.swift */; };
 		8DE0B1AA2BEEC1AE003CA92B /* ContactFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE0B1A92BEEC1AE003CA92B /* ContactFormView.swift */; };
@@ -103,6 +104,7 @@
 		8DB258452BF0D86800E55F68 /* EnumTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumTests.swift; sourceTree = "<group>"; };
 		8DB258472BF0D93900E55F68 /* MapBubbleViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapBubbleViewTests.swift; sourceTree = "<group>"; };
 		8DB2584B2BF0DB0E00E55F68 /* ContactFormViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactFormViewModelTests.swift; sourceTree = "<group>"; };
+		8DB2584D2BF0DE3000E55F68 /* ContactFormUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactFormUITests.swift; sourceTree = "<group>"; };
 		8DCBB4B92BEEE37100E425CD /* SCReport+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SCReport+Extension.swift"; sourceTree = "<group>"; };
 		8DCBB4BB2BEEF20A00E425CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DE0B1A72BEEC198003CA92B /* ContactFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactFormViewModel.swift; sourceTree = "<group>"; };
@@ -225,6 +227,7 @@
 			children = (
 				8D2008CA2BECADE30043700A /* ShareTripUITests.swift */,
 				8D2008CC2BECADE30043700A /* ShareTripUITestsLaunchTests.swift */,
+				8DB2584D2BF0DE3000E55F68 /* ContactFormUITests.swift */,
 			);
 			path = ShareTripUITests;
 			sourceTree = "<group>";
@@ -591,6 +594,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D2008CB2BECADE30043700A /* ShareTripUITests.swift in Sources */,
+				8DB2584E2BF0DE3000E55F68 /* ContactFormUITests.swift in Sources */,
 				8D2008CD2BECADE30043700A /* ShareTripUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
