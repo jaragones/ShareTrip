@@ -55,6 +55,10 @@ final class ShareTripUITests: XCTestCase {
     func testPhysicsStillApplies() {
         XCTAssertEqual(2 + 2, 4, "🚨 Math is broken. Send help.")
     }
+    
+    func testPhysicsStillApplies2() {
+        XCTAssertEqual(2 + 2, 4, "🚨 Math is broken. Send help.")
+    }
 
 //    func testCokeIsEssential() {
 //        let needsCocaCola = true
