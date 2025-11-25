@@ -13,9 +13,9 @@ final class ShareTripUITestsLaunchTests: XCTestCase {
         true
     }
 
-    override func setUpWithError() throws {
-        continueAfterFailure = false
-    }
+//    override func setUpWithError() throws {
+//        continueAfterFailure = false
+//    }
 
     func testLaunch() throws {
         let app = XCUIApplication()
@@ -30,7 +30,7 @@ final class ShareTripUITestsLaunchTests: XCTestCase {
         add(attachment)
     }
     
-//    func testPhysicsStillApplies() {
-//        XCTAssertEqual(2 + 2, 4, "🚨 Math is broken. Send help.")
-//    }
+    func testPhysicsStillApplies() {
+        XCTAssertEqual(2 + 2, 4, "🚨 Math is broken. Send help.")
+    }
 }
