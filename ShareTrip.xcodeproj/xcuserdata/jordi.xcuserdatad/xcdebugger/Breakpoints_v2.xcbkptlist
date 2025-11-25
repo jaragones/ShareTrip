@@ -47,9 +47,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "78"
-            endingLineNumber = "78"
-            landmarkName = "testTextEditorInputMaxValue()"
-            landmarkType = "7">
+            endingLineNumber = "78">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -63,9 +61,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "16"
-            endingLineNumber = "16"
-            landmarkName = "setUpWithError()"
-            landmarkType = "7">
+            endingLineNumber = "16">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
