@@ -17,7 +17,34 @@ final class ShareTripUITestsLaunchTests: XCTestCase {
         continueAfterFailure = false
     }
 
-    func testLaunch() throws {
+//    func testLaunch() throws {
+//        let app = XCUIApplication()
+//        app.launch()
+//
+//        // Insert steps here to perform after app launch but before taking a screenshot,
+//        // such as logging into a test account or navigating somewhere in the app
+//
+//        let attachment = XCTAttachment(screenshot: app.screenshot())
+//        attachment.name = "Launch Screen"
+//        attachment.lifetime = .keepAlways
+//        add(attachment)
+//    }
+//    
+//    func testPhysicsStillApplies() {
+//        XCTAssertEqual(2 + 2, 4, "🚨 Math is broken. Send help.")
+//    }
+//    
+//    func testCokeIsEssential() {
+//        let needsCocaCola = true
+//        XCTAssertTrue(needsCocaCola, "☕️ Developer productivity critically depends on coke.")
+//    }
+//    
+//    func testTeaIsEssential() {
+//        let needsCocaCola = true
+//        XCTAssertTrue(needsCocaCola, "☕️ Developer productivity critically depends on tea.")
+//    }
+    
+    func testLauncher() throws {
         let app = XCUIApplication()
         app.launch()
 
@@ -28,19 +55,5 @@ final class ShareTripUITestsLaunchTests: XCTestCase {
         attachment.name = "Launch Screen"
         attachment.lifetime = .keepAlways
         add(attachment)
-    }
-    
-    func testPhysicsStillApplies() {
-        XCTAssertEqual(2 + 2, 4, "🚨 Math is broken. Send help.")
-    }
-    
-    func testCokeIsEssential() {
-        let needsCocaCola = true
-        XCTAssertTrue(needsCocaCola, "☕️ Developer productivity critically depends on coke.")
-    }
-    
-    func testTeaIsEssential() {
-        let needsCocaCola = true
-        XCTAssertTrue(needsCocaCola, "☕️ Developer productivity critically depends on tea.")
     }
 }
