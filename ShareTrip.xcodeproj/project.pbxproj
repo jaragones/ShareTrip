@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8D03D5762ED88D19003105E1 /* ContactFormUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D03D5752ED88D10003105E1 /* ContactFormUITests.swift */; };
 		8D14150B2EC69D940088233B /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D14150A2EC69D8C0088233B /* UIView+Extension.swift */; };
 		8D2008AB2BECADE00043700A /* ShareTripApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2008AA2BECADE00043700A /* ShareTripApp.swift */; };
 		8D2008AD2BECADE00043700A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2008AC2BECADE00043700A /* ContentView.swift */; };
@@ -79,7 +78,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		8D03D5752ED88D10003105E1 /* ContactFormUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactFormUITests.swift; sourceTree = "<group>"; };
 		8D14150A2EC69D8C0088233B /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		8D2008A72BECADE00043700A /* ShareTrip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShareTrip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D2008AA2BECADE00043700A /* ShareTripApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareTripApp.swift; sourceTree = "<group>"; };
@@ -225,7 +223,6 @@
 		8D2008C92BECADE30043700A /* ShareTripUITests */ = {
 			isa = PBXGroup;
 			children = (
-				8D03D5752ED88D10003105E1 /* ContactFormUITests.swift */,
 				8D2008CA2BECADE30043700A /* ShareTripUITests.swift */,
 				8D2008CC2BECADE30043700A /* ShareTripUITestsLaunchTests.swift */,
 			);
@@ -594,7 +591,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D2008CB2BECADE30043700A /* ShareTripUITests.swift in Sources */,
-				8D03D5762ED88D19003105E1 /* ContactFormUITests.swift in Sources */,
 				8D2008CD2BECADE30043700A /* ShareTripUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
