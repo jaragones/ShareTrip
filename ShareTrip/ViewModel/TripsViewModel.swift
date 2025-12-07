@@ -87,4 +87,18 @@ class TripsViewModel: ObservableObject {
             self.filteredTrips = self.trips.filter { $0.status == "ongoing" }
         }
     }
+    
+    func sortTripsByDistance() {
+        guard let userLocation = userLocation else { return }
+
+        filteredTrips = filteredTrips.sorted { tripA, tripB in
+            let locA = CLLocation(latitude: tripA.latitude, longitude: tripA.longitude)
+            let locB = CLLocation(latitude: tripB.latitude, longitude: tripB.longitude)
+
+            let distanceA = userLocation.distance(from: locA)
+            let distanceB = userLocation.distance(from: locB)
+
+            return distanceA < distanceB
+        }
+    }
 }
