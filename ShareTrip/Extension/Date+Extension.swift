@@ -51,6 +51,17 @@ extension Date {
             return "n/a"
         }
     }
+    
+    static func getSimpleHourForDate(from string: String) -> String {
+        if let date = Date().fromStringWithFormat(str: string) {
+            let hour = date.get(.hour)
+            let minute = date.get(.minute)
+
+            return String(format: "%d:%d", hour, minute)
+        } else {
+            return "n/a"
+        }
+    }
 
     private func getShortMonthName() -> String {
         let dateFormatter = DateFormatter()
