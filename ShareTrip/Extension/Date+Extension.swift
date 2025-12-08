@@ -41,12 +41,12 @@ extension Date {
         }
     }
     
-    static func getHourForDate(from string: String) -> String {
+    static func getSimpleHourForDate(from string: String) -> String {
         if let date = Date().fromStringWithFormat(str: string) {
             let hour = date.get(.hour)
             let minute = date.get(.minute)
 
-            return String(format: "%02d:%02d", hour, minute)
+            return String(format: "%d:%d", hour, minute)
         } else {
             return "n/a"
         }
